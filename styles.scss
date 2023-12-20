@@ -7,8 +7,10 @@ $line-height: 20px;
     width: 120rem;
     height: 5rem;
 }
+//btnLog
 .navbar-nav {
     &.col-lg-4 {
+      float: right;
       button.btnLog {
         width: 7.1875rem;
         height: 2.375rem;
@@ -22,6 +24,7 @@ $line-height: 20px;
         text-decoration: none;
         display: inline-block;
         white-space: nowrap;
+        line-height: 0px;
         &:hover{
         background-color: #3BB54A;
         border-color: #3BB54A;
@@ -31,11 +34,10 @@ $line-height: 20px;
       }
     }
   }
-
+//navbar
 #collapsibleNavbar {
   .navbar-nav {
     .nav-item {
-      float: right;
       list-style-type:none ; 
       .nav-link {
         &.text-body {
@@ -44,20 +46,30 @@ $line-height: 20px;
             font-weight: $font-weight;
             line-height: $line-height;
             white-space: nowrap;
+            text-align: right;
+            &:hover {
+              border: 2px solid #3BB54A;
+              background-color: white;
+              color: #3BB54A;
+            }
         }
       }
     }
   }
 }
-.navbar-toggler-icon {
-  // Đường viền màu trắng, dày 1 pixel, kiểu solid (đứt đoạn)
-  border: 1px solid white;
-  // Kích thước của hình ảnh
-  width: 20px;
-  height: 20px;
-  // Đảm bảo hình ảnh không bị bo tròn
-  border-radius: 0;
+//icon menu
+.navbar-toggler {
+  // Xóa đường viền cho nút
+  border: white;
+  
+  // Nếu bạn muốn xóa đường viền chỉ khi hover, sử dụng pseudo-class :hover
+  &:hover {
+    border: none;
+  }
+  
+  // Nếu bạn muốn áp dụng các kiểu khác cho nút, thêm các thuộc tính khác tại đây
 }
+
 
 
 
