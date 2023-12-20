@@ -1,37 +1,44 @@
-@charset "UTF-8";
-li {
-  list-style-type: none;
-}
-
-.header {
+.container-fluid {
   width: 120rem;
   height: 5rem;
 }
 
-.navbar {
-  font-family: "Inter", sans-serif; /* Font-family là Inter, và nếu không có Inter, sẽ sử dụng font sans-serif */
-  font-size: 16px; /* Kích thước chữ là 16px */
-  font-weight: 600; /* Độ đậm của chữ là 600 (font-weight: bold;) */
-  line-height: 30px; /* Chiều cao dòng là 30px */
-  letter-spacing: 0em; /* Khoảng cách giữa các ký tự, 0em nghĩa là mặc định */
-  text-align: left; /* Căn lề văn bản sang trái */
-}
-
-.btnLog {
+.navbar-nav.col-lg-4 button.btnLog {
+  width: 7.1875rem;
+  height: 2.375rem;
   border-radius: 22px;
   border: 2px solid #3BB54A;
   background-color: white;
   color: #3BB54A;
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 8px;
+  margin: 6px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  white-space: nowrap;
 }
-
-.btnLog:hover {
+.navbar-nav.col-lg-4 button.btnLog:hover {
   background-color: #3BB54A;
   border-color: #3BB54A;
   color: white;
   background-image: linear-gradient(to left, #7EC341, #3BB54A);
+}
+
+#collapsibleNavbar .navbar-nav .nav-item {
+  float: right;
+  list-style-type: none;
+}
+#collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.navbar-toggler-icon {
+  border: 1px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
 }/*# sourceMappingURL=styles.css.map */

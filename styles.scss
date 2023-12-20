@@ -1,34 +1,63 @@
-li{
-    list-style-type:none ; 
-}
+$font-family: 'Inter';
+$font-size: 16px;
+$font-weight: 500;
+$line-height: 20px;
 //Header Css
-.header{
+.container-fluid{
     width: 120rem;
     height: 5rem;
 }
-.navbar{
-    font-family: 'Inter', sans-serif; /* Font-family là Inter, và nếu không có Inter, sẽ sử dụng font sans-serif */
-    font-size: 16px; /* Kích thước chữ là 16px */
-    font-weight: 600; /* Độ đậm của chữ là 600 (font-weight: bold;) */
-    line-height: 30px; /* Chiều cao dòng là 30px */
-    letter-spacing: 0em; /* Khoảng cách giữa các ký tự, 0em nghĩa là mặc định */
-    text-align: left; /* Căn lề văn bản sang trái */
+.navbar-nav {
+    &.col-lg-4 {
+      button.btnLog {
+        width: 7.1875rem;
+        height: 2.375rem;
+        border-radius: 22px;
+        border: 2px solid #3BB54A;
+        background-color: white;
+        color: #3BB54A;
+        padding: 8px;
+        margin: 6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        white-space: nowrap;
+        &:hover{
+        background-color: #3BB54A;
+        border-color: #3BB54A;
+        color: white;
+        background-image: linear-gradient(to left, #7EC341, #3BB54A);
+        }
+      }
+    }
+  }
+
+#collapsibleNavbar {
+  .navbar-nav {
+    .nav-item {
+      float: right;
+      list-style-type:none ; 
+      .nav-link {
+        &.text-body {
+            font-family: $font-family, sans-serif;
+            font-size: $font-size;
+            font-weight: $font-weight;
+            line-height: $line-height;
+            white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+.navbar-toggler-icon {
+  // Đường viền màu trắng, dày 1 pixel, kiểu solid (đứt đoạn)
+  border: 1px solid white;
+  // Kích thước của hình ảnh
+  width: 20px;
+  height: 20px;
+  // Đảm bảo hình ảnh không bị bo tròn
+  border-radius: 0;
 }
 
-.btnLog{
-    border-radius: 22px;
-    border: 2px solid  #3BB54A;
-    background-color:  white;
-    color: #3BB54A;
-    padding: 10px 20px;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
-.btnLog:hover {
-    background-color: #3BB54A;
-    border-color: #3BB54A;
-    color: white;
-    background-image: linear-gradient(to left, #7EC341, #3BB54A);
-}
+
+
