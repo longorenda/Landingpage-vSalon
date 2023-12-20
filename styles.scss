@@ -2,74 +2,119 @@ $font-family: 'Inter';
 $font-size: 16px;
 $font-weight: 500;
 $line-height: 20px;
-//Header Css
-.container-fluid{
-    width: 120rem;
-    height: 5rem;
+
+//Header Css Start
+.container-fluid {
+  width: 120rem;
+  height: 5rem;
 }
+
 //btnLog
 .navbar-nav {
-    &.col-lg-4 {
-      float: right;
-      button.btnLog {
-        width: 7.1875rem;
-        height: 2.375rem;
-        border-radius: 22px;
-        border: 2px solid #3BB54A;
-        background-color: white;
-        color: #3BB54A;
-        padding: 8px;
-        margin: 6px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        white-space: nowrap;
-        line-height: 0px;
-        &:hover{
+  &.col-lg-4 {
+    float: right;
+    button.btnLog {
+      width: 7.1875rem;
+      height: 2.375rem;
+      border-radius: 22px;
+      border: 2px solid #3BB54A;
+      background-color: white;
+      color: #3BB54A;
+      padding: 8px;
+      margin: 6px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      white-space: nowrap;
+      line-height: 0px;
+
+      &:hover {
         background-color: #3BB54A;
         border-color: #3BB54A;
         color: white;
         background-image: linear-gradient(to left, #7EC341, #3BB54A);
-        }
       }
     }
   }
+}
+
 //navbar
 #collapsibleNavbar {
   .navbar-nav {
     .nav-item {
-      list-style-type:none ; 
+      list-style-type: none;
       .nav-link {
         &.text-body {
-            font-family: $font-family, sans-serif;
-            font-size: $font-size;
-            font-weight: $font-weight;
-            line-height: $line-height;
-            white-space: nowrap;
-            text-align: right;
-            &:hover {
-              border: 2px solid #3BB54A;
-              background-color: white;
-              color: #3BB54A;
-            }
+          font-family: $font-family, sans-serif;
+          font-size: $font-size;
+          font-weight: $font-weight;
+          line-height: $line-height;
+          white-space: nowrap;
+          text-align: right;
+          &:hover {
+            font-weight: $font-weight+100;
+          }
         }
       }
     }
   }
 }
+
 //icon menu
 .navbar-toggler {
   // Xóa đường viền cho nút
   border: white;
-  
+
   // Nếu bạn muốn xóa đường viền chỉ khi hover, sử dụng pseudo-class :hover
   &:hover {
     border: none;
   }
-  
+
   // Nếu bạn muốn áp dụng các kiểu khác cho nút, thêm các thuộc tính khác tại đây
 }
 
-
-
-
+//Header Css End
+.swiper-container {
+  .swiper-wrapper {
+    .swiper-slide {
+      position: relative;
+      display: inline-block;
+      .text-overlay {
+        width: 35rem;
+        height: 5rem;
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        color: black;
+        /* Màu văn bản */
+        font-size: 38px;
+        /* Kích thước văn bản */
+        font-weight: bold;
+        /* Độ đậm của văn bản */
+        text-align: left;        
+        /* Canh lề văn bản */
+        z-index: 2;
+        span{
+            color: #3BB54A;
+              }
+      }
+      button.slide-btn {
+        position: absolute;
+        top: 55%;
+        left: 21%;
+        font-size: 20px;
+        width: 12rem;
+        height: 2.4rem;
+        border-radius: 22px;
+        border: 2px solid #3BB54A;
+        background-color: #3BB54A;
+        z-index: 1;
+        a.text-link {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}

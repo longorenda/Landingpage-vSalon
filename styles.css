@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container-fluid {
   width: 120rem;
   height: 5rem;
@@ -40,9 +41,7 @@
   text-align: right;
 }
 #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
-  border: 2px solid #3BB54A;
-  background-color: white;
-  color: #3BB54A;
+  font-weight: 600;
 }
 
 .navbar-toggler {
@@ -50,4 +49,45 @@
 }
 .navbar-toggler:hover {
   border: none;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+  position: relative;
+  display: inline-block;
+}
+.swiper-container .swiper-wrapper .swiper-slide .text-overlay {
+  width: 35rem;
+  height: 5rem;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: black;
+  /* Màu văn bản */
+  font-size: 38px;
+  /* Kích thước văn bản */
+  font-weight: bold;
+  /* Độ đậm của văn bản */
+  text-align: left;
+  /* Canh lề văn bản */
+  z-index: 2;
+}
+.swiper-container .swiper-wrapper .swiper-slide .text-overlay span {
+  color: #3BB54A;
+}
+.swiper-container .swiper-wrapper .swiper-slide button.slide-btn {
+  position: absolute;
+  top: 55%;
+  left: 21%;
+  font-size: 20px;
+  width: 12rem;
+  height: 2.4rem;
+  border-radius: 22px;
+  border: 2px solid #3BB54A;
+  background-color: #3BB54A;
+  z-index: 1;
+}
+.swiper-container .swiper-wrapper .swiper-slide button.slide-btn a.text-link {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
