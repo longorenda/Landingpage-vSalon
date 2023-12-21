@@ -1,58 +1,75 @@
 $font-family: 'Inter';
-$font-size: 16px;
-$font-weight: 500;
-$line-height: 20px;
 
 //Header Css Start
-.container-fluid {
-  width: 120rem;
-  height: 5rem;
-}
+.navbar {
+  .container-fluid {
+    height: 80px;
 
-//btnLog
-.navbar-nav {
-  &.col-lg-4 {
-    float: right;
-    button.btnLog {
-      width: 7.1875rem;
-      height: 2.375rem;
-      border-radius: 22px;
-      border: 2px solid #3BB54A;
-      background-color: white;
-      color: #3BB54A;
-      padding: 8px;
-      margin: 6px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      white-space: nowrap;
-      line-height: 0px;
-
-      &:hover {
-        background-color: #3BB54A;
-        border-color: #3BB54A;
-        color: white;
-        background-image: linear-gradient(to left, #7EC341, #3BB54A);
+    .d-flex {
+      .navbar-toggler {
+        &.icon-search {
+          display: none;
+        }
       }
     }
   }
 }
 
+//btnLog
+.navbar-nav {
+  display: flex;
+
+  /* Sử dụng flexbox để các phần tử con nằm trong một dòng */
+  &.col-lg-4 {
+    float: right;
+
+    .nav-item {
+      &.btnLog {
+        width: 7.1875rem;
+        height: 2.375rem;
+        border-radius: 22px;
+        border: 2px solid #3BB54A;
+        background-color: white;
+        color: #3BB54A;
+        padding: 8px;
+        margin: 6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        white-space: nowrap;
+        line-height: 0px;
+
+        &:hover {
+          background-color: #3BB54A;
+          border-color: #3BB54A;
+          color: white;
+          background-image: linear-gradient(to left, #7EC341, #3BB54A);
+        }
+      }
+    }
+
+  }
+}
+
 //navbar
 #collapsibleNavbar {
+  z-index: 2;
+
   .navbar-nav {
     .nav-item {
       list-style-type: none;
+
       .nav-link {
         &.text-body {
           font-family: $font-family, sans-serif;
-          font-size: $font-size;
-          font-weight: $font-weight;
-          line-height: $line-height;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
           white-space: nowrap;
           text-align: right;
+
           &:hover {
-            font-weight: $font-weight+100;
+            font-weight: 600;
           }
         }
       }
@@ -60,61 +77,213 @@ $line-height: 20px;
   }
 }
 
-//icon menu
-.navbar-toggler {
-  // Xóa đường viền cho nút
-  border: white;
-
-  // Nếu bạn muốn xóa đường viền chỉ khi hover, sử dụng pseudo-class :hover
-  &:hover {
-    border: none;
-  }
-
-  // Nếu bạn muốn áp dụng các kiểu khác cho nút, thêm các thuộc tính khác tại đây
-}
-
 //Header Css End
-.swiper-container {
-  .swiper-wrapper {
-    .swiper-slide {
-      position: relative;
-      display: inline-block;
-      .text-overlay {
-        width: 35rem;
-        height: 5rem;
-        position: absolute;
-        top: 30%;
-        left: 35%;
-        transform: translate(-50%, -50%);
-        color: black;
-        /* Màu văn bản */
-        font-size: 38px;
-        /* Kích thước văn bản */
-        font-weight: bold;
-        /* Độ đậm của văn bản */
-        text-align: left;        
-        /* Canh lề văn bản */
-        z-index: 2;
-        span{
+
+//Swiper Start
+.slider-content {
+  .swiper-container-slide {
+    .swiper-wrapper {
+      .swiper-slide {
+        position: relative;
+        display: inline-block;
+
+        .text-overlay {
+          width: 35rem;
+          height: 5rem;
+          position: absolute;
+          top: 30%;
+          left: 35%;
+          transform: translate(-50%, -50%);
+          color: black;
+          font-size: 38px;
+          font-weight: bold;
+          text-align: left;
+          z-index: 2;
+
+          span {
             color: #3BB54A;
-              }
-      }
-      button.slide-btn {
-        position: absolute;
-        top: 55%;
-        left: 21%;
-        font-size: 20px;
-        width: 12rem;
-        height: 2.4rem;
-        border-radius: 22px;
-        border: 2px solid #3BB54A;
-        background-color: #3BB54A;
-        z-index: 1;
-        a.text-link {
-          text-decoration: none;
-          color: white;
+          }
+        }
+
+        button.slide-btn {
+          position: absolute;
+          top: 55%;
+          left: 20%;
+          font-size: 20px;
+          width: 15.125rem;
+          height: 3rem;
+          line-height: 30px;
+          border-radius: 22px;
+          border: 2px solid #3BB54A;
+          background-color: #3BB54A;
+          z-index: 1;
+
+          a.text-link {
+            text-decoration: none;
+            color: white;
+          }
         }
       }
     }
   }
 }
+
+.benefit-content {
+  .swiper-container-benefit {
+    .swiper-wrapper {
+      display: flex;
+      justify-content: center; // Căn giữa các thẻ swiper-slide
+      align-items: center; // Căn giữa theo chiều dọc nếu thẻ có chiều cao khác nhau
+
+      .swiper-slide {
+        width: 100%; // Đảm bảo mỗi thẻ swiper-slide chiếm toàn bộ chiều rộng của parent
+        flex: 0 0 auto; // Chặn co giãn và không cho phép thẻ co lại
+      }
+
+      .content-section {
+        border: 2px solid #3BB54A;
+        width: 363px;
+        height: 423.67px;
+        position: relative;
+        text-align: center;
+
+        .slide-sizeimg {
+          max-width: 100%; // Đảm bảo hình ảnh không vượt quá kích thước của parent
+          height: auto; // Đảm bảo tỷ lệ chiều cao được duy trì
+        }
+
+        .text-overlay {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24.2px;
+          position: absolute;
+          bottom: 0;
+          /* Đặt ở dưới */
+          left: 50%;
+          /* Dịch chuyển về giữa */
+          transform: translateX(-50%);
+          /* Đặt ở giữa theo chiều ngang */
+          text-align: center;
+
+          /* Căn giữa nếu muốn */
+          span {
+            color: green; // Màu xanh
+          }
+        }
+      }
+    }
+  }
+}
+
+//Swiper End
+
+//RESPONSIVE
+
+// Small devices (screen < 576px)
+@media (max-width: 576px) {
+  #collapsibleNavbar {
+    background-color: white;
+
+    .navbar-nav {
+      .nav-item {
+        margin: 2px;
+
+        .nav-link {
+          text-decoration: none;
+          color: white;
+
+          &.text-body {
+            border: 2px solid #3BB54A;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .slider-content {
+    .swiper-container-slide {
+      .swiper-wrapper {
+        .swiper-slide {
+          width: 553px;
+          height: 375px;
+
+          .text-overlay {
+            width: 19.815rem;
+            height: 7.875rem;
+            top: 25%;
+            left: 32%;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 42px;
+          }
+
+          button.slide-btn {
+            top: 50%;
+            left: 3%;
+            width: 15.125rem;
+            height: 3rem;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Medium devices (577px < screen < 991px)
+@media screen and (max-width: 991px) and (min-width: 577px) {
+  .navbar {
+    .container-fluid {
+      .d-flex {
+        .navbar-toggler {
+          &.icon-search {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+
+
+  .slider-content {
+    .swiper-container-slide {
+      .swiper-wrapper {
+        .swiper-slide {
+          .text-overlay {
+            width: 34.6875rem;
+            height: 7.125rem;
+            top: 30%;
+            left: 37%;
+            font-size: 38px;
+            line-height: 57px;
+            font-weight: 700;
+            ;
+          }
+
+          button.slide-btn {
+            top: 50%;
+            left: 3%;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }

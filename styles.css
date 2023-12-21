@@ -1,13 +1,19 @@
 @charset "UTF-8";
-.container-fluid {
-  width: 120rem;
-  height: 5rem;
+.navbar .container-fluid {
+  height: 80px;
+}
+.navbar .container-fluid .d-flex .navbar-toggler.icon-search {
+  display: none;
 }
 
+.navbar-nav {
+  display: flex;
+  /* Sử dụng flexbox để các phần tử con nằm trong một dòng */
+}
 .navbar-nav.col-lg-4 {
   float: right;
 }
-.navbar-nav.col-lg-4 button.btnLog {
+.navbar-nav.col-lg-4 .nav-item.btnLog {
   width: 7.1875rem;
   height: 2.375rem;
   border-radius: 22px;
@@ -22,13 +28,16 @@
   white-space: nowrap;
   line-height: 0px;
 }
-.navbar-nav.col-lg-4 button.btnLog:hover {
+.navbar-nav.col-lg-4 .nav-item.btnLog:hover {
   background-color: #3BB54A;
   border-color: #3BB54A;
   color: white;
   background-image: linear-gradient(to left, #7EC341, #3BB54A);
 }
 
+#collapsibleNavbar {
+  z-index: 2;
+}
 #collapsibleNavbar .navbar-nav .nav-item {
   list-style-type: none;
 }
@@ -44,18 +53,11 @@
   font-weight: 600;
 }
 
-.navbar-toggler {
-  border: white;
-}
-.navbar-toggler:hover {
-  border: none;
-}
-
-.swiper-container .swiper-wrapper .swiper-slide {
+.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide {
   position: relative;
   display: inline-block;
 }
-.swiper-container .swiper-wrapper .swiper-slide .text-overlay {
+.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
   width: 35rem;
   height: 5rem;
   position: absolute;
@@ -63,31 +65,129 @@
   left: 35%;
   transform: translate(-50%, -50%);
   color: black;
-  /* Màu văn bản */
   font-size: 38px;
-  /* Kích thước văn bản */
   font-weight: bold;
-  /* Độ đậm của văn bản */
   text-align: left;
-  /* Canh lề văn bản */
   z-index: 2;
 }
-.swiper-container .swiper-wrapper .swiper-slide .text-overlay span {
+.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay span {
   color: #3BB54A;
 }
-.swiper-container .swiper-wrapper .swiper-slide button.slide-btn {
+.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
   position: absolute;
   top: 55%;
-  left: 21%;
+  left: 20%;
   font-size: 20px;
-  width: 12rem;
-  height: 2.4rem;
+  width: 15.125rem;
+  height: 3rem;
+  line-height: 30px;
   border-radius: 22px;
   border: 2px solid #3BB54A;
   background-color: #3BB54A;
   z-index: 1;
 }
-.swiper-container .swiper-wrapper .swiper-slide button.slide-btn a.text-link {
+.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn a.text-link {
   text-decoration: none;
   color: white;
+}
+
+.benefit-content .swiper-container-benefit .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide {
+  width: 100%;
+  flex: 0 0 auto;
+}
+.benefit-content .swiper-container-benefit .swiper-wrapper .content-section {
+  border: 2px solid #3BB54A;
+  width: 363px;
+  height: 423.67px;
+  position: relative;
+  text-align: center;
+}
+.benefit-content .swiper-container-benefit .swiper-wrapper .content-section .slide-sizeimg {
+  max-width: 100%;
+  height: auto;
+}
+.benefit-content .swiper-container-benefit .swiper-wrapper .content-section .text-overlay {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+  position: absolute;
+  bottom: 0;
+  /* Đặt ở dưới */
+  left: 50%;
+  /* Dịch chuyển về giữa */
+  transform: translateX(-50%);
+  /* Đặt ở giữa theo chiều ngang */
+  text-align: center;
+  /* Căn giữa nếu muốn */
+}
+.benefit-content .swiper-container-benefit .swiper-wrapper .content-section .text-overlay span {
+  color: green;
+}
+
+@media (max-width: 576px) {
+  #collapsibleNavbar {
+    background-color: white;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item {
+    margin: 2px;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: white;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+    border: 2px solid #3BB54A;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide {
+    width: 553px;
+    height: 375px;
+  }
+  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
+    width: 19.815rem;
+    height: 7.875rem;
+    top: 25%;
+    left: 32%;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+  }
+  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
+    top: 50%;
+    left: 3%;
+    width: 15.125rem;
+    height: 3rem;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 577px) {
+  .navbar .container-fluid .d-flex .navbar-toggler.icon-search {
+    display: inline;
+  }
+  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
+    width: 34.6875rem;
+    height: 7.125rem;
+    top: 30%;
+    left: 37%;
+    font-size: 38px;
+    line-height: 57px;
+    font-weight: 700;
+  }
+  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
+    top: 50%;
+    left: 3%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+  }
 }/*# sourceMappingURL=styles.css.map */

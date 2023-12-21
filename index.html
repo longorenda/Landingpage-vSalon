@@ -16,12 +16,19 @@
   <!--Header Start-->
   <nav class="navbar navbar-expand-lg bg-white navbar-white">
     <div class="container-fluid">
-      <a class="navbar-brand col-lg-4 d-flex flex-row-reverse" href="#"><img src="./img/Logo_vSalon.jpg" alt="logo" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <img src="./feather-icon/mobile/feather-icon/menu.png" class="navbar-toggler-icon"></img>
-      </button>
-      <div class="collapse navbar-collapse col-lg-4" id="collapsibleNavbar">
+      <div class="navbar-brand col-lg-4 col-sm-4 d-flex flex-row-reverse">
+        <a href="#"><img src="./img/Logo_vSalon.jpg" alt="logo" /></a>
+      </div>
+      <div class="d-flex">
+        <button class="navbar-toggler icon-search" type="button" style="border: none;">
+          <img src="./feather-icon/search.png"></img>
+        </button>
+        <button class="navbar-toggler icon-menu" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar" style="border: none;">
+          <img src="./feather-icon/mobile/feather-icon/menu.png" class="navbar-toggler-icon"></img>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse col-lg-8 col-sm-8" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link text-body" href="#">Trang chủ</a>
@@ -53,42 +60,78 @@
     </div>
   </nav>
   <!--Header End-->
+
   <!-- Slider main container -->
-  <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="./slide/sld1.png">
-        <div class="text-overlay">
-          Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
+  <div class="slider-content">
+    <div class="swiper-container-slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./slide/sld1.png" class="slide-sizeimg">
+          <div class="text-overlay">
+            Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
+          </div>
+          <button class="slide-btn">
+            <a href="#" class="text-link">Dùng thử miễn phí</a>
+          </button>
         </div>
-        <button class="slide-btn">
-          <a href="#" class="text-link">Dùng thử miễn phí</a>
-        </button>
-      </div>
-      <div class="swiper-slide">
-        <img src="./slide/sld2.png">
-        <div class="text-overlay">
-          Tương tác thường xuyên với <span>Khách hàng</span> thân thiết
+        <div class="swiper-slide">
+          <img src="./slide/sld2.png" class="slide-sizeimg">
+          <div class="text-overlay">
+            Tương tác thường xuyên với <span>Khách hàng</span> thân thiết
+          </div>
+          <button class="slide-btn">
+            <a href="#" class="text-link">Dùng thử miễn phí</a>
+          </button>
         </div>
-        <button class="slide-btn">
-          <a href="#" class="text-link">Dùng thử miễn phí</a>
-        </button>
-      </div>
-      <div class="swiper-slide">
-        <img src="./slide/sld3.png">
-        <div class="text-overlay">
-          Gắn kết, khích lệ nhân viên <span>qua ứng dụng di động</span>
+        <div class="swiper-slide">
+          <img src="./slide/sld3.png" class="slide-sizeimg">
+          <div class="text-overlay">
+            Gắn kết, khích lệ <span>nhân viên</span> qua ứng dụng di động
+          </div>
+          <button class="slide-btn">
+            <a href="#" class="text-link">Dùng thử miễn phí</a>
+          </button>
         </div>
-        <button class="slide-btn">
-          <a href="#" class="text-link">Dùng thử miễn phí</a>
-        </button>
       </div>
     </div>
+
   </div>
 
   <!--Benefit Start-->
-  <div></div>
+  <div class="benefit-content">
+    <!-- Swiper -->
+    <div class="swiper-container-benefit">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="content-section">
+            <img src="./feather-icon/benefit-icon-1.png" class="slide-sizeimg">
+            <div class="text-overlay">
+              <span>Gắn kết khách hàng</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-section">
+            <img src="./feather-icon/benefit-icon-2.png" class="slide-sizeimg">
+            <div class="text-overlay">
+              <span>Điều phối lịch hẹn</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-section">
+            <img src="./feather-icon/benefit-icon-3.png" class="slide-sizeimg">
+            <div class="text-overlay">
+              <span>Quản lý hiệu quả</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
   <!--Benefit End-->
   <!--Function Start-->
   <div></div>
@@ -97,11 +140,18 @@
   <div></div>
   <!--Price End-->
   <script>
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container-slide', {
       autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
+        delay: 2500
       }
+    });
+    var swiper1 = new Swiper('.swiper-container-benefit', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   </script>
 </body>
