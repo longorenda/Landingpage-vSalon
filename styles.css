@@ -112,29 +112,33 @@ body {
   line-height: 30px;
 }
 .benefit-content .swiper-container-benefit {
-  width: 25%;
+  width: 24%;
+}
+.benefit-content .swiper-container-benefit .swiper-wrapper {
+  margin: 5% 50%;
+  width: 30%;
+  height: 423px;
 }
 .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide {
+  border: 2px solid #3BB54A;
+  height: 100%;
+  position: relative;
+  text-align: center;
   width: 100%;
   flex: 0 0 auto;
 }
-.benefit-content .swiper-container-benefit .swiper-wrapper .content-section {
-  border: 2px solid #3BB54A;
-  width: 363px;
-  height: 423.67px;
-  position: relative;
-  text-align: center;
-}
-.benefit-content .swiper-container-benefit .swiper-wrapper .content-section .slide-sizeimg {
+.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .slide-sizeimg {
   max-width: 100%;
   height: auto;
+  bottom: 0;
 }
-.benefit-content .swiper-container-benefit .swiper-wrapper .content-section .text-overlay {
+.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay {
+  width: 80%;
   font-size: 20px;
   font-weight: 700;
   line-height: 24.2px;
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   /* Đặt ở dưới */
   left: 50%;
   /* Dịch chuyển về giữa */
@@ -143,8 +147,34 @@ body {
   text-align: center;
   /* Căn giữa nếu muốn */
 }
-.benefit-content .swiper-container-benefit .swiper-wrapper .content-section .text-overlay span {
+.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay span {
+  display: block;
   color: green;
+  margin-bottom: 20%;
+}
+.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.benefit-content .swiper-container-benefit .swiper-button-next,
+.benefit-content .swiper-container-benefit .swiper-button-prev {
+  top: 105%;
+  transform: translateY(-50%);
+  color: #3BB54A;
+  background-color: #E1F3E3;
+  border: 1px solid #3BB54A;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+.benefit-content .swiper-container-benefit .swiper-button-next {
+  right: 9%;
+  /* Điều chỉnh vị trí nút next từ phải */
+}
+.benefit-content .swiper-container-benefit .swiper-button-prev {
+  left: 9%;
+  /* Điều chỉnh vị trí nút prev từ trái */
 }
 
 @media (max-width: 576px) {
@@ -193,6 +223,57 @@ body {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
+  }
+  .benefit-content {
+    margin-top: 3rem;
+  }
+  .benefit-content .benefit-header h1.header-text {
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 700;
+  }
+  .benefit-content .benefit-header h1.header-text span {
+    color: #3BB54A;
+  }
+  .benefit-content .benefit-header p.header-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  .benefit-content .swiper-container-benefit {
+    width: 100%;
+  }
+  .benefit-content .swiper-container-benefit .swiper-wrapper {
+    margin: 0;
+  }
+  .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay {
+    width: 80%;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    position: absolute;
+    bottom: 10%;
+    /* Đặt ở dưới */
+    left: 50%;
+    /* Dịch chuyển về giữa */
+    transform: translateX(-50%);
+    /* Đặt ở giữa theo chiều ngang */
+    text-align: center;
+    /* Căn giữa nếu muốn */
+  }
+  .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay span {
+    display: block;
+    color: green;
+    margin-bottom: 20%;
+  }
+  .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .benefit-content .swiper-container-benefit .swiper-button-next,
+  .benefit-content .swiper-container-benefit .swiper-button-prev {
+    display: none;
   }
 }
 @media (max-width: 991px) and (min-width: 577px) {

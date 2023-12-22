@@ -29,6 +29,7 @@ body {
 
   .navbar-nav {
     display: flex;
+
     .nav-item {
       list-style-type: none;
 
@@ -47,28 +48,30 @@ body {
             color: #3BB54A !important; // Màu chữ khi hover
           }
         }
-        
-      }&.btnLog {
-          width: 7.1875rem;
-          height: 2.375rem;
-          border-radius: 22px;
-          border: 2px solid #3BB54A;
-          background-color: white;
-          color: #3BB54A;
-          padding: 8px;
-          margin: 6px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          white-space: nowrap;
-          line-height: 0px;
-          font-weight: bold;
-    
-          &:hover {
-            color: white;
-            background-image: linear-gradient(to left, #7EC341, #3BB54A);
-          }
+
+      }
+
+      &.btnLog {
+        width: 7.1875rem;
+        height: 2.375rem;
+        border-radius: 22px;
+        border: 2px solid #3BB54A;
+        background-color: white;
+        color: #3BB54A;
+        padding: 8px;
+        margin: 6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        white-space: nowrap;
+        line-height: 0px;
+        font-weight: bold;
+
+        &:hover {
+          color: white;
+          background-image: linear-gradient(to left, #7EC341, #3BB54A);
         }
+      }
     }
   }
 }
@@ -126,16 +129,19 @@ body {
 //Benefit container
 .benefit-content {
   margin-top: 3rem;
+
   .benefit-header {
     h1.header-text {
       font-size: 36px;
       line-height: 43px;
       font-weight: 700;
+
       span {
         color: #3BB54A;
       }
     }
-    p.header-text{
+
+    p.header-text {
       font-size: 20px;
       font-weight: 500;
       line-height: 30px;
@@ -143,32 +149,33 @@ body {
   }
 
   .swiper-container-benefit {
-    width: 25%;
-    
-    .swiper-wrapper {
-      .swiper-slide {
-        width: 100%; // Đảm bảo mỗi thẻ swiper-slide chiếm toàn bộ chiều rộng của parent
-        flex: 0 0 auto; // Chặn co giãn và không cho phép thẻ co lại
-      }
+    width: 24%;
 
-      .content-section {
+    .swiper-wrapper {
+      margin: 5% 50%;
+      width: 30%;
+      height: 423px;
+      .swiper-slide {
         border: 2px solid #3BB54A;
-        width: 363px;
-        height: 423.67px;
+        height: 100%;
         position: relative;
         text-align: center;
+        width: 100%; // Đảm bảo mỗi thẻ swiper-slide chiếm toàn bộ chiều rộng của parent
+        flex: 0 0 auto; // Chặn co giãn và không cho phép thẻ co lại
 
         .slide-sizeimg {
           max-width: 100%; // Đảm bảo hình ảnh không vượt quá kích thước của parent
           height: auto; // Đảm bảo tỷ lệ chiều cao được duy trì
+          bottom: 0;
         }
 
         .text-overlay {
+          width: 80%;
           font-size: 20px;
           font-weight: 700;
           line-height: 24.2px;
           position: absolute;
-          bottom: 0;
+          bottom: 10%;
           /* Đặt ở dưới */
           left: 50%;
           /* Dịch chuyển về giữa */
@@ -178,11 +185,43 @@ body {
 
           /* Căn giữa nếu muốn */
           span {
+            display: block;
             color: green; // Màu xanh
+            margin-bottom: 20%;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
           }
         }
       }
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 105%;
+      transform: translateY(-50%);
+      color: #3BB54A;
+      background-color: #E1F3E3;
+      border: 1px solid #3BB54A;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+    }
+    
+
+    .swiper-button-next {
+      right: 9%;
+      /* Điều chỉnh vị trí nút next từ phải */
+    }
+
+    .swiper-button-prev {
+      left: 9%;
+      /* Điều chỉnh vị trí nút prev từ trái */
+    }
+
   }
 }
 
@@ -214,6 +253,7 @@ body {
             }
           }
         }
+
         &.btnLog {
           width: 100%;
           height: 2.375rem;
@@ -254,6 +294,70 @@ body {
     }
   }
 
+  //Benefit container
+.benefit-content {
+  margin-top: 3rem;
+  .benefit-header {
+    h1.header-text {
+      font-size: 36px;
+      line-height: 43px;
+      font-weight: 700;
+
+      span {
+        color: #3BB54A;
+      }
+    }
+
+    p.header-text {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+
+  .swiper-container-benefit {
+    width: 100%;
+
+    .swiper-wrapper {
+      margin: 0;
+      .swiper-slide {
+        .text-overlay {
+          width: 80%;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24.2px;
+          position: absolute;
+          bottom: 10%;
+          /* Đặt ở dưới */
+          left: 50%;
+          /* Dịch chuyển về giữa */
+          transform: translateX(-50%);
+          /* Đặt ở giữa theo chiều ngang */
+          text-align: center;
+
+          /* Căn giữa nếu muốn */
+          span {
+            display: block;
+            color: green; // Màu xanh
+            margin-bottom: 20%;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+
+  }
+}
 }
 
 // Medium devices (577px < screen < 991px)
@@ -280,6 +384,7 @@ body {
             }
           }
         }
+
         &.btnLog {
           width: 100%;
           height: 2.375rem;
