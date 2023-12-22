@@ -52,7 +52,7 @@
             </a>
           </li>
         </ul>
-        <div class="navbar-nav col-lg-4">
+        <div class="navbar-nav">
           <button class="nav-item btnLog">Đăng ký</button>
           <button class="nav-item btnLog">Đăng nhập</button>
         </div>
@@ -62,14 +62,14 @@
   <!--Header End-->
 
   <!-- Slider main container -->
-  <div class="slider-content">
+  <div class="slider-content container-fluid">
     <div class="swiper-container-slide">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="./slide/sld1.png" class="slide-sizeimg">
-          <div class="text-overlay">
+          <h1 class="text-overlay">
             Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
-          </div>
+          </h1>
           <button class="slide-btn">
             <a href="#" class="text-link">Dùng thử miễn phí</a>
           </button>
@@ -94,11 +94,16 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <!--Benefit Start-->
-  <div class="benefit-content">
+  <div class="benefit-content container-fluid">
+    <div class="benefit-header text-center">
+      <h1 class="header-text ">
+        Lợi ích khi sử dụng <span>vSalon</span>
+      </h1>
+      <p class="header-text">Hãy để chúng tôi đồng hành cùng thành công của bạn</p>
+    </div>
     <!-- Swiper -->
     <div class="swiper-container-benefit">
       <div class="swiper-wrapper">
@@ -140,14 +145,15 @@
   <div></div>
   <!--Price End-->
   <script>
-    var swiper = new Swiper('.swiper-container-slide', {
-      autoplay: {
-        delay: 2500
-      }
+    var swiper1 = new Swiper('.swiper-container-slide', {
+      loop: true,
     });
-    var swiper1 = new Swiper('.swiper-container-benefit', {
+    var swiper2 = new Swiper('.swiper-container-benefit', {
       spaceBetween: 30,
       centeredSlides: true,
+      // autoplay: {
+      //   delay: 3000
+      // },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

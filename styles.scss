@@ -1,9 +1,15 @@
-$font-family: 'Inter';
+$font-family: "Inter";
 
-//Header Css Start
+body {
+  color: #2F4858 !important;
+}
+
+//Header container
 .navbar {
+  color: #333333;
+
   .container-fluid {
-    height: 80px;
+    height: 3.5rem;
 
     .d-flex {
       .navbar-toggler {
@@ -12,43 +18,9 @@ $font-family: 'Inter';
         }
       }
     }
-  }
-}
-
-//btnLog
-.navbar-nav {
-  display: flex;
-
-  /* Sử dụng flexbox để các phần tử con nằm trong một dòng */
-  &.col-lg-4 {
-    float: right;
-
-    .nav-item {
-      &.btnLog {
-        width: 7.1875rem;
-        height: 2.375rem;
-        border-radius: 22px;
-        border: 2px solid #3BB54A;
-        background-color: white;
-        color: #3BB54A;
-        padding: 8px;
-        margin: 6px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        white-space: nowrap;
-        line-height: 0px;
-
-        &:hover {
-          background-color: #3BB54A;
-          border-color: #3BB54A;
-          color: white;
-          background-image: linear-gradient(to left, #7EC341, #3BB54A);
-        }
-      }
-    }
 
   }
+
 }
 
 //navbar
@@ -56,6 +28,7 @@ $font-family: 'Inter';
   z-index: 2;
 
   .navbar-nav {
+    display: flex;
     .nav-item {
       list-style-type: none;
 
@@ -63,27 +36,50 @@ $font-family: 'Inter';
         &.text-body {
           font-family: $font-family, sans-serif;
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 600;
           line-height: 20px;
           white-space: nowrap;
           text-align: right;
+          color: #3BB54A;
 
           &:hover {
-            font-weight: 600;
+            font-weight: 700;
+            color: #3BB54A !important; // Màu chữ khi hover
           }
         }
-      }
+        
+      }&.btnLog {
+          width: 7.1875rem;
+          height: 2.375rem;
+          border-radius: 22px;
+          border: 2px solid #3BB54A;
+          background-color: white;
+          color: #3BB54A;
+          padding: 8px;
+          margin: 6px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          white-space: nowrap;
+          line-height: 0px;
+          font-weight: bold;
+    
+          &:hover {
+            color: white;
+            background-image: linear-gradient(to left, #7EC341, #3BB54A);
+          }
+        }
     }
   }
 }
 
-//Header Css End
-
-//Swiper Start
+//Slider container
 .slider-content {
   .swiper-container-slide {
     .swiper-wrapper {
       .swiper-slide {
+        width: 100%; // Đảm bảo mỗi thẻ swiper-slide chiếm toàn bộ chiều rộng của parent
+        flex: 0 0 auto; // Chặn co giãn và không cho phép thẻ co lại
         position: relative;
         display: inline-block;
 
@@ -94,9 +90,8 @@ $font-family: 'Inter';
           top: 30%;
           left: 35%;
           transform: translate(-50%, -50%);
-          color: black;
           font-size: 38px;
-          font-weight: bold;
+          font-weight: 700;
           text-align: left;
           z-index: 2;
 
@@ -128,13 +123,29 @@ $font-family: 'Inter';
   }
 }
 
+//Benefit container
 .benefit-content {
-  .swiper-container-benefit {
-    .swiper-wrapper {
-      display: flex;
-      justify-content: center; // Căn giữa các thẻ swiper-slide
-      align-items: center; // Căn giữa theo chiều dọc nếu thẻ có chiều cao khác nhau
+  margin-top: 3rem;
+  .benefit-header {
+    h1.header-text {
+      font-size: 36px;
+      line-height: 43px;
+      font-weight: 700;
+      span {
+        color: #3BB54A;
+      }
+    }
+    p.header-text{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
 
+  .swiper-container-benefit {
+    width: 25%;
+    
+    .swiper-wrapper {
       .swiper-slide {
         width: 100%; // Đảm bảo mỗi thẻ swiper-slide chiếm toàn bộ chiều rộng của parent
         flex: 0 0 auto; // Chặn co giãn và không cho phép thẻ co lại
@@ -175,30 +186,38 @@ $font-family: 'Inter';
   }
 }
 
-//Swiper End
 
 //RESPONSIVE
 
 // Small devices (screen < 576px)
 @media (max-width: 576px) {
+
   #collapsibleNavbar {
     background-color: white;
 
     .navbar-nav {
       .nav-item {
-        margin: 2px;
+        margin: 1px;
 
         .nav-link {
           text-decoration: none;
-          color: white;
 
           &.text-body {
+            border-radius: 22px;
             border: 2px solid #3BB54A;
-            border-radius: 5px;
-            font-weight: bold;
-            color: white;
+            background-color: white;
             text-align: center;
+
+            &:hover {
+              color: white !important;
+              background-image: linear-gradient(to left, #7EC341, #3BB54A);
+            }
           }
+        }
+        &.btnLog {
+          width: 100%;
+          height: 2.375rem;
+          margin: 2px;
         }
       }
     }
@@ -215,7 +234,7 @@ $font-family: 'Inter';
             width: 19.815rem;
             height: 7.875rem;
             top: 25%;
-            left: 32%;
+            left: 45%;
             font-size: 28px;
             font-weight: 700;
             line-height: 42px;
@@ -238,7 +257,38 @@ $font-family: 'Inter';
 }
 
 // Medium devices (577px < screen < 991px)
-@media screen and (max-width: 991px) and (min-width: 577px) {
+@media (max-width: 991px) and (min-width: 577px) {
+  #collapsibleNavbar {
+    background-color: white;
+
+    .navbar-nav {
+      .nav-item {
+        margin: 1px;
+
+        .nav-link {
+          text-decoration: none;
+
+          &.text-body {
+            border-radius: 22px;
+            border: 2px solid #3BB54A;
+            background-color: white;
+            text-align: center;
+
+            &:hover {
+              color: white !important;
+              background-image: linear-gradient(to left, #7EC341, #3BB54A);
+            }
+          }
+        }
+        &.btnLog {
+          width: 100%;
+          height: 2.375rem;
+          margin: 2px;
+        }
+      }
+    }
+  }
+
   .navbar {
     .container-fluid {
       .d-flex {
@@ -260,7 +310,7 @@ $font-family: 'Inter';
             width: 34.6875rem;
             height: 7.125rem;
             top: 30%;
-            left: 37%;
+            left: 40%;
             font-size: 38px;
             line-height: 57px;
             font-weight: 700;

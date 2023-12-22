@@ -1,19 +1,41 @@
 @charset "UTF-8";
+body {
+  color: #2F4858 !important;
+}
+
+.navbar {
+  color: #333333;
+}
 .navbar .container-fluid {
-  height: 80px;
+  height: 3.5rem;
 }
 .navbar .container-fluid .d-flex .navbar-toggler.icon-search {
   display: none;
 }
 
-.navbar-nav {
+#collapsibleNavbar {
+  z-index: 2;
+}
+#collapsibleNavbar .navbar-nav {
   display: flex;
-  /* Sử dụng flexbox để các phần tử con nằm trong một dòng */
 }
-.navbar-nav.col-lg-4 {
-  float: right;
+#collapsibleNavbar .navbar-nav .nav-item {
+  list-style-type: none;
 }
-.navbar-nav.col-lg-4 .nav-item.btnLog {
+#collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: nowrap;
+  text-align: right;
+  color: #3BB54A;
+}
+#collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+  font-weight: 700;
+  color: #3BB54A !important;
+}
+#collapsibleNavbar .navbar-nav .nav-item.btnLog {
   width: 7.1875rem;
   height: 2.375rem;
   border-radius: 22px;
@@ -27,33 +49,16 @@
   display: inline-block;
   white-space: nowrap;
   line-height: 0px;
+  font-weight: bold;
 }
-.navbar-nav.col-lg-4 .nav-item.btnLog:hover {
-  background-color: #3BB54A;
-  border-color: #3BB54A;
+#collapsibleNavbar .navbar-nav .nav-item.btnLog:hover {
   color: white;
   background-image: linear-gradient(to left, #7EC341, #3BB54A);
 }
 
-#collapsibleNavbar {
-  z-index: 2;
-}
-#collapsibleNavbar .navbar-nav .nav-item {
-  list-style-type: none;
-}
-#collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  white-space: nowrap;
-  text-align: right;
-}
-#collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
-  font-weight: 600;
-}
-
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide {
+  width: 100%;
+  flex: 0 0 auto;
   position: relative;
   display: inline-block;
 }
@@ -64,9 +69,8 @@
   top: 30%;
   left: 35%;
   transform: translate(-50%, -50%);
-  color: black;
   font-size: 38px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: left;
   z-index: 2;
 }
@@ -91,10 +95,24 @@
   color: white;
 }
 
-.benefit-content .swiper-container-benefit .swiper-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.benefit-content {
+  margin-top: 3rem;
+}
+.benefit-content .benefit-header h1.header-text {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 700;
+}
+.benefit-content .benefit-header h1.header-text span {
+  color: #3BB54A;
+}
+.benefit-content .benefit-header p.header-text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.benefit-content .swiper-container-benefit {
+  width: 25%;
 }
 .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide {
   width: 100%;
@@ -134,18 +152,25 @@
     background-color: white;
   }
   #collapsibleNavbar .navbar-nav .nav-item {
-    margin: 2px;
+    margin: 1px;
   }
   #collapsibleNavbar .navbar-nav .nav-item .nav-link {
     text-decoration: none;
-    color: white;
   }
   #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+    border-radius: 22px;
     border: 2px solid #3BB54A;
-    border-radius: 5px;
-    font-weight: bold;
-    color: white;
+    background-color: white;
     text-align: center;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+    color: white !important;
+    background-image: linear-gradient(to left, #7EC341, #3BB54A);
+  }
+  #collapsibleNavbar .navbar-nav .nav-item.btnLog {
+    width: 100%;
+    height: 2.375rem;
+    margin: 2px;
   }
   .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide {
     width: 553px;
@@ -155,7 +180,7 @@
     width: 19.815rem;
     height: 7.875rem;
     top: 25%;
-    left: 32%;
+    left: 45%;
     font-size: 28px;
     font-weight: 700;
     line-height: 42px;
@@ -170,7 +195,31 @@
     line-height: 30px;
   }
 }
-@media screen and (max-width: 991px) and (min-width: 577px) {
+@media (max-width: 991px) and (min-width: 577px) {
+  #collapsibleNavbar {
+    background-color: white;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item {
+    margin: 1px;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+    border-radius: 22px;
+    border: 2px solid #3BB54A;
+    background-color: white;
+    text-align: center;
+  }
+  #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+    color: white !important;
+    background-image: linear-gradient(to left, #7EC341, #3BB54A);
+  }
+  #collapsibleNavbar .navbar-nav .nav-item.btnLog {
+    width: 100%;
+    height: 2.375rem;
+    margin: 2px;
+  }
   .navbar .container-fluid .d-flex .navbar-toggler.icon-search {
     display: inline;
   }
@@ -178,7 +227,7 @@
     width: 34.6875rem;
     height: 7.125rem;
     top: 30%;
-    left: 37%;
+    left: 40%;
     font-size: 38px;
     line-height: 57px;
     font-weight: 700;
