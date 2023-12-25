@@ -142,116 +142,11 @@ body {
   }
 }
 
-//Benefit container
-// .benefit-content {
-//   padding-top: 2.5rem;
-
-//   .benefit-header {
-//     h1.header-text {
-//       font-size: 36px;
-//       line-height: 43px;
-//       font-weight: 700;
-
-//       span {
-//         color: #3BB54A;
-//       }
-//     }
-
-//     p.header-text {
-//       font-size: 20px;
-//       font-weight: 500;
-//       line-height: 30px;
-//     }
-//   }
-
-//   // .swiper-container-benefit {
-//   //   width: 24%;
-//   //   position: relative;
-//   //   .swiper-wrapper {
-//   //     margin: 5% 50%;
-//   //     width: 30%;
-//   //     height: 423px;
-//   //     position: relative;
-//   //     .swiper-slide {
-//   //       border: 2px solid #3BB54A;
-//   //       height: 100%;
-//   //       position: relative;
-//   //       text-align: center;
-//   //       width: 100%; // Đảm bảo mỗi thẻ swiper-slide chiếm toàn bộ chiều rộng của parent
-//   //       flex: 0 0 auto; // Chặn co giãn và không cho phép thẻ co lại
-
-//   //       .slide-sizeimg {
-//   //         max-width: 100%; // Đảm bảo hình ảnh không vượt quá kích thước của parent
-//   //         height: auto; // Đảm bảo tỷ lệ chiều cao được duy trì
-//   //         bottom: 0;
-//   //       }
-
-//   //       .text-overlay {
-//   //         width: 80%;
-//   //         font-size: 20px;
-//   //         font-weight: 700;
-//   //         line-height: 24.2px;
-//   //         position: absolute;
-//   //         bottom: 10%;
-//   //         /* Đặt ở dưới */
-//   //         left: 50%;
-//   //         /* Dịch chuyển về giữa */
-//   //         transform: translateX(-50%);
-//   //         /* Đặt ở giữa theo chiều ngang */
-//   //         text-align: center;
-
-//   //         /* Căn giữa nếu muốn */
-//   //         span {
-//   //           display: block;
-//   //           color: green; // Màu xanh
-//   //           margin-bottom: 20%;
-//   //         }
-
-//   //         p {
-//   //           font-weight: 500;
-//   //           font-size: 16px;
-//   //           line-height: 24px;
-//   //         }
-//   //       }
-//   //     }
-//   //   }
-//   //   .swiper-pagination{
-//   //     position: absolute;
-//   //     bottom: 10px; // Điều chỉnh khoảng cách từ bottom theo ý muốn
-//   //     left: 50%; // Đặt nó giữa trên chiều ngang
-//   //     transform: translateX(-50%); // Dịch chuyển về bên trái 50% để căn giữa
-//   //   }
-//   //   .swiper-button-next,
-//   //   .swiper-button-prev {
-//   //     position: absolute;
-//   //     top: 105%;
-//   //     transform: translateY(-50%);
-//   //     color: #3BB54A;
-//   //     background-color: #E1F3E3;
-//   //     border: 1px solid #3BB54A;
-//   //     border-radius: 100%;
-//   //     width: 50px;
-//   //     height: 50px;
-//   //   }
-
-//   //   .swiper-button-next:after, .swiper-button-prev:after {
-//   //     font-size: 16px;
-//   //   }
-
-//   //   .swiper-button-next {
-//   //     right: 9%;
-//   //     /* Điều chỉnh vị trí nút next từ phải */
-//   //   }
-
-//   //   .swiper-button-prev {
-//   //     left: 9%;
-//   //     /* Điều chỉnh vị trí nút prev từ trái */
-//   //   }
-
-//   // }
-// }
+//Benefit Header
 #benefit {
   .benefit-header {
+    margin-top: 25px;
+
     h1.header-text {
       font-size: 36px;
       line-height: 43px;
@@ -270,54 +165,60 @@ body {
   }
 }
 
+//Benefit swiper
 .swiper.swiper-container-benefit {
   width: 60%;
   padding-top: 50px;
   padding-bottom: 50px;
   height: 100%;
 
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 35%;
-    height: 423px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 3px solid #3BB54A;
-    border-radius: 3%;
-    background-color: white;
-    img {
-      display: block;
-      max-width: 100%; // Đảm bảo ảnh không vượt quá chiều rộng của slide
-      height: auto; // Giữ tỉ lệ khung hình
+  .swiper-wrapper {
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 35%;
+      height: 423px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 3px solid #3BB54A;
+      border-radius: 3%;
+      background-color: white;
 
-    }
+      img {
+        display: block;
+        max-width: 100%; // Đảm bảo ảnh không vượt quá chiều rộng của slide
+        height: auto; // Giữ tỉ lệ khung hình
 
-    .box-content {
-      text-align: center; // Căn giữa nội dung trong box-content
-      margin-top: 10px; // Ví dụ: thêm margin top là 10px giữa img và box-content
-
-      span {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24.2px;
-        color: #3BB54A;
       }
 
-      p {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        padding: 15% 15%;
-      }
-    }
+      .box-content {
+        text-align: center; // Căn giữa nội dung trong box-content
+        margin-top: 10px; // Ví dụ: thêm margin top là 10px giữa img và box-content
 
+        span {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24.2px;
+          color: #3BB54A;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          padding: 15% 15%;
+        }
+      }
+
+    }
   }
+
+  // .swiper-button-control{
+
+  // }
 }
-
-
 
 
 //RESPONSIVE
@@ -326,33 +227,39 @@ body {
 @media (max-width: 576px) {
 
   //Header container
-  #collapsibleNavbar {
-    background-color: white;
+  .navbar {
 
-    .navbar-nav {
-      .nav-item {
-        margin: 1px;
+    .container-fluid {
+      #collapsibleNavbar {
+        background-color: white;
 
-        .nav-link {
-          text-decoration: none;
+        .navbar-nav {
+          .nav-item {
+            margin: 1px;
 
-          &.text-body {
-            border-radius: 22px;
-            border: 2px solid #3BB54A;
-            background-color: white;
-            text-align: center;
+            .nav-link {
+              text-decoration: none;
 
-            &:hover {
-              color: white !important;
-              background-image: linear-gradient(to left, #7EC341, #3BB54A);
+              &.text-body {
+                border-radius: 22px;
+                border: 2px solid #3BB54A;
+                background-color: white;
+                text-align: center;
+                justify-content: center;
+
+                &:hover {
+                  color: white !important;
+                  background-image: linear-gradient(to left, #7EC341, #3BB54A);
+                }
+              }
+            }
+
+            &.btnLog {
+              width: 100%;
+              height: 2.375rem;
+              margin: 2px;
             }
           }
-        }
-
-        &.btnLog {
-          width: 100%;
-          height: 2.375rem;
-          margin: 2px;
         }
       }
     }
@@ -392,90 +299,22 @@ body {
   }
 
   //Benefit container
-  .benefit-content {
-    margin-top: 3rem;
+  .swiper.swiper-container-benefit {
+    width: 100%;
 
-    .benefit-header {
-      h1.header-text {
-        font-size: 36px;
-        line-height: 43px;
-        font-weight: 700;
-
-        span {
-          color: #3BB54A;
-        }
-      }
-
-      p.header-text {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 30px;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 100%;
       }
     }
 
-    .container {
-      max-width: 100%;
-      padding: 0 1rem;
-      margin: 0 auto;
+    .swiper-button-control {
 
-      .benefit-slider {
-        position: relative;
-        height: 52rem;
-        padding: 2rem 0;
-      }
-
-      .swiper-wrapper {
-        .benefit-slide {
-          width: 37rem;
-          height: 42rem;
-          position: relative;
-        }
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
       }
     }
-
-    // .swiper-container-benefit {
-    //   width: 100%;
-
-    //   .swiper-wrapper {
-    //     margin: 0;
-
-    //     .swiper-slide {
-    //       .text-overlay {
-    //         width: 80%;
-    //         font-size: 20px;
-    //         font-weight: 700;
-    //         line-height: 24.2px;
-    //         position: absolute;
-    //         bottom: 10%;
-    //         /* Đặt ở dưới */
-    //         left: 50%;
-    //         /* Dịch chuyển về giữa */
-    //         transform: translateX(-50%);
-    //         /* Đặt ở giữa theo chiều ngang */
-    //         text-align: center;
-
-    //         /* Căn giữa nếu muốn */
-    //         span {
-    //           display: block;
-    //           color: green; // Màu xanh
-    //           margin-bottom: 20%;
-    //         }
-
-    //         p {
-    //           font-weight: 500;
-    //           font-size: 16px;
-    //           line-height: 24px;
-    //         }
-    //       }
-    //     }
-    //   }
-
-    //   .swiper-button-next,
-    //   .swiper-button-prev {
-    //     display: none;
-    //   }
-
-    // }
   }
 }
 
