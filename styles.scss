@@ -202,13 +202,14 @@ body {
           font-weight: 700;
           line-height: 24.2px;
           color: #3BB54A;
+          margin-top: 10px;
         }
 
         p {
           font-weight: 500;
           font-size: 16px;
           line-height: 24px;
-          padding: 15% 15%;
+          padding: 5% 15%;
         }
       }
 
@@ -403,6 +404,21 @@ body {
       }
     }
   }
+
+    //Benefit container
+    .swiper.swiper-container-benefit {
+      width: 70%;
+  
+      .swiper-wrapper {
+        .swiper-slide {
+          width: 65%;
+        }
+      }
+  
+      .swiper-button-control {
+          display: none;
+      }
+    }
 
 }
 
