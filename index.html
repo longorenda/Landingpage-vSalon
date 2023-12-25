@@ -97,44 +97,103 @@
   </div>
 
   <!--Benefit Start-->
-  <div class="benefit-content container-fluid">
-     <!--Header-->
+  <div class="contain-fluid" id="benefit">
+    <!-- Header -->
     <div class="benefit-header text-center">
       <h1 class="header-text ">
         Lợi ích khi sử dụng <span>vSalon</span>
       </h1>
       <p class="header-text">Hãy để chúng tôi đồng hành cùng thành công của bạn</p>
     </div>
-    <!-- Slide Swiper -->
-    <div class="swiper-container-benefit">
+    <!-- Swiper -->
+    <div class="swiper swiper-container-benefit">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img src="./feather-icon/benefit-icon-1.png" class="slide-sizeimg">
-            <div class="text-overlay">
-              <span>Gắn kết khách hàng</span>
-              <p>Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.</p>
-            </div>
+          <img src="./feather-icon/benefit-icon-1.png" />
+          <div class="box-content">
+            <span>Gắn kết khách hàng</span>
+            <p>Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.</p>
+          </div>
         </div>
         <div class="swiper-slide">
-            <img src="./feather-icon/benefit-icon-2.png" class="slide-sizeimg">
-            <div class="text-overlay">
-              <span>Điều phối lịch hẹn</span>
-              <p>Không còn lo lắng khi quên lịch hẹn với khách hàng.</p>
-            </div>
+          <img src="./feather-icon/benefit-icon-2.png" />
+          <div class="box-content">
+            <span>Điều phối lịch hẹn</span>
+            <p>Không còn lo lắng khi quên lịch hẹn với khách hàng.</p>
+          </div>
         </div>
         <div class="swiper-slide">
-            <img src="./feather-icon/benefit-icon-3.png" class="slide-sizeimg">
-            <div class="text-overlay">
-              <span>Quản lý hiệu quả</span>
-              <p>Giúp nhân viên tăng năng xuất làm việc. Quản lý hiệu quả từ xa</p>
-            </div>
+          <img src="./feather-icon/benefit-icon-3.png" />
+          <div class="box-content">
+            <span>Quản lý hiệu quả</span>
+            <p>Giúp nhân viên tăng năng xuất làm việc. Quản lý hiệu quả từ xa</p>
+          </div>
         </div>
       </div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
+
+  <!-- <div class="benefit-content container-fluid">
+
+    <div class="benefit-header text-center">
+      <h1 class="header-text ">
+        Lợi ích khi sử dụng <span>vSalon</span>
+      </h1>
+      <p class="header-text">Hãy để chúng tôi đồng hành cùng thành công của bạn</p>
+    </div>
+
+    <div class="container">
+      <div class="swiper benefit-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide benefit-slide">
+            <div class="benefit-slider-img">
+              <img src="./feather-icon/benefit-icon-1.png" alt="benefit">
+            </div>
+            <div class="benefit-slider-content">
+              <span>Gắn kết khách hàng</span>
+              <div class="benefit-slider-content bottom">
+                <p class="benefit-sub">
+                  Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide benefit-slide">
+            <div class="benefit-slider-img">
+              <img src="./feather-icon/benefit-icon-1.png" alt="benefit">
+            </div>
+            <div class="benefit-slider-content">
+              <span>Gắn kết khách hàng</span>
+              <div class="benefit-slider-content bottom">
+                <p class="benefit-sub">
+                  Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide benefit-slide">
+            <div class="benefit-slider-img">
+              <img src="./feather-icon/benefit-icon-1.png" alt="benefit">
+            </div>
+            <div class="benefit-slider-content">
+              <span>Gắn kết khách hàng</span>
+              <div class="benefit-slider-content bottom">
+                <p class="benefit-sub">
+                  Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefit-slider-control">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
   <!--Benefit End-->
 
   <!--Function Start-->
@@ -147,15 +206,21 @@
     var swiper1 = new Swiper('.swiper-container-slide', {
       loop: true,
     });
-    var swiper2 = new Swiper('.swiper-container-benefit', {
-      spaceBetween: 30,
+    var swiper2 = new Swiper(".swiper-container-benefit", {
+      loop: true,
+      effect: "coverflow",
+      grabCursor: true,
       centeredSlides: true,
-      // autoplay: {
-      //   delay: 3000
-      // },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 40,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
       },
     });
   </script>

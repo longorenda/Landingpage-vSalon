@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   color: #2F4858 !important;
 }
@@ -12,17 +11,16 @@ body {
 .navbar .container-fluid .d-flex .navbar-toggler.icon-search {
   display: none;
 }
-
-#collapsibleNavbar {
+.navbar .container-fluid #collapsibleNavbar {
   z-index: 2;
 }
-#collapsibleNavbar .navbar-nav {
+.navbar .container-fluid #collapsibleNavbar .navbar-nav {
   display: flex;
 }
-#collapsibleNavbar .navbar-nav .nav-item {
+.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
   list-style-type: none;
 }
-#collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -31,11 +29,11 @@ body {
   text-align: right;
   color: #3BB54A;
 }
-#collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
   font-weight: 700;
   color: #3BB54A !important;
 }
-#collapsibleNavbar .navbar-nav .nav-item.btnLog {
+.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog {
   width: 7.1875rem;
   height: 2.375rem;
   border-radius: 22px;
@@ -51,23 +49,42 @@ body {
   line-height: 0px;
   font-weight: bold;
 }
-#collapsibleNavbar .navbar-nav .nav-item.btnLog:hover {
+.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog:hover {
   color: white;
   background-image: linear-gradient(to left, #7EC341, #3BB54A);
 }
 
+.slider-content {
+  width: 100%;
+  max-width: 100%;
+}
+.slider-content.container-fluid {
+  padding: 0px;
+}
+.slider-content .swiper-container-slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slider-content .swiper-container-slide .swiper-wrapper {
+  width: 100%;
+}
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide {
   width: 100%;
   flex: 0 0 auto;
-  position: relative;
   display: inline-block;
 }
+.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
-  width: 35rem;
+  width: 30%;
   height: 5rem;
   position: absolute;
   top: 30%;
-  left: 35%;
+  left: 40%;
   transform: translate(-50%, -50%);
   font-size: 38px;
   font-weight: 700;
@@ -80,7 +97,7 @@ body {
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
   position: absolute;
   top: 55%;
-  left: 20%;
+  left: 25%;
   font-size: 20px;
   width: 15.125rem;
   height: 3rem;
@@ -95,86 +112,59 @@ body {
   color: white;
 }
 
-.benefit-content {
-  margin-top: 3rem;
-}
-.benefit-content .benefit-header h1.header-text {
+#benefit .benefit-header h1.header-text {
   font-size: 36px;
   line-height: 43px;
   font-weight: 700;
 }
-.benefit-content .benefit-header h1.header-text span {
+#benefit .benefit-header h1.header-text span {
   color: #3BB54A;
 }
-.benefit-content .benefit-header p.header-text {
+#benefit .benefit-header p.header-text {
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
 }
-.benefit-content .swiper-container-benefit {
-  width: 24%;
-}
-.benefit-content .swiper-container-benefit .swiper-wrapper {
-  margin: 5% 50%;
-  width: 30%;
-  height: 423px;
-}
-.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide {
-  border: 2px solid #3BB54A;
+
+.swiper.swiper-container-benefit {
+  width: 60%;
+  padding-top: 50px;
+  padding-bottom: 50px;
   height: 100%;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  flex: 0 0 auto;
 }
-.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .slide-sizeimg {
+.swiper.swiper-container-benefit .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 35%;
+  height: 423px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #3BB54A;
+  border-radius: 3%;
+  background-color: white;
+}
+.swiper.swiper-container-benefit .swiper-slide img {
+  display: block;
   max-width: 100%;
   height: auto;
-  bottom: 0;
 }
-.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay {
-  width: 80%;
+.swiper.swiper-container-benefit .swiper-slide .box-content {
+  text-align: center;
+  margin-top: 10px;
+}
+.swiper.swiper-container-benefit .swiper-slide .box-content span {
   font-size: 20px;
   font-weight: 700;
   line-height: 24.2px;
-  position: absolute;
-  bottom: 10%;
-  /* Đặt ở dưới */
-  left: 50%;
-  /* Dịch chuyển về giữa */
-  transform: translateX(-50%);
-  /* Đặt ở giữa theo chiều ngang */
-  text-align: center;
-  /* Căn giữa nếu muốn */
+  color: #3BB54A;
 }
-.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay span {
-  display: block;
-  color: green;
-  margin-bottom: 20%;
-}
-.benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay p {
+.swiper.swiper-container-benefit .swiper-slide .box-content p {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-}
-.benefit-content .swiper-container-benefit .swiper-button-next,
-.benefit-content .swiper-container-benefit .swiper-button-prev {
-  top: 105%;
-  transform: translateY(-50%);
-  color: #3BB54A;
-  background-color: #E1F3E3;
-  border: 1px solid #3BB54A;
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-}
-.benefit-content .swiper-container-benefit .swiper-button-next {
-  right: 9%;
-  /* Điều chỉnh vị trí nút next từ phải */
-}
-.benefit-content .swiper-container-benefit .swiper-button-prev {
-  left: 9%;
-  /* Điều chỉnh vị trí nút prev từ trái */
+  padding: 15% 15%;
 }
 
 @media (max-width: 576px) {
@@ -202,13 +192,13 @@ body {
     height: 2.375rem;
     margin: 2px;
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide {
+  .slider-content {
     width: 553px;
     height: 375px;
   }
   .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
-    width: 19.815rem;
-    height: 7.875rem;
+    width: 85%;
+    height: 40%;
     top: 25%;
     left: 45%;
     font-size: 28px;
@@ -240,69 +230,59 @@ body {
     font-weight: 500;
     line-height: 30px;
   }
-  .benefit-content .swiper-container-benefit {
-    width: 100%;
+  .benefit-content .container {
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
   }
-  .benefit-content .swiper-container-benefit .swiper-wrapper {
-    margin: 0;
+  .benefit-content .container .benefit-slider {
+    position: relative;
+    height: 52rem;
+    padding: 2rem 0;
   }
-  .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay {
-    width: 80%;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24.2px;
-    position: absolute;
-    bottom: 10%;
-    /* Đặt ở dưới */
-    left: 50%;
-    /* Dịch chuyển về giữa */
-    transform: translateX(-50%);
-    /* Đặt ở giữa theo chiều ngang */
-    text-align: center;
-    /* Căn giữa nếu muốn */
-  }
-  .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay span {
-    display: block;
-    color: green;
-    margin-bottom: 20%;
-  }
-  .benefit-content .swiper-container-benefit .swiper-wrapper .swiper-slide .text-overlay p {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .benefit-content .swiper-container-benefit .swiper-button-next,
-  .benefit-content .swiper-container-benefit .swiper-button-prev {
-    display: none;
+  .benefit-content .container .swiper-wrapper .benefit-slide {
+    width: 37rem;
+    height: 42rem;
+    position: relative;
   }
 }
 @media (max-width: 991px) and (min-width: 577px) {
-  #collapsibleNavbar {
+  .navbar .container-fluid .navbar-brand {
+    padding-left: 3%;
+  }
+  .navbar .container-fluid .d-flex {
+    display: inline-block !important;
+  }
+  .navbar .container-fluid .d-flex .navbar-toggler.icon-search {
+    display: inline;
+  }
+  .navbar .container-fluid #collapsibleNavbar {
     background-color: white;
   }
-  #collapsibleNavbar .navbar-nav .nav-item {
+  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
     margin: 1px;
   }
-  #collapsibleNavbar .navbar-nav .nav-item .nav-link {
+  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link {
     text-decoration: none;
   }
-  #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
     border-radius: 22px;
     border: 2px solid #3BB54A;
     background-color: white;
     text-align: center;
   }
-  #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
     color: white !important;
     background-image: linear-gradient(to left, #7EC341, #3BB54A);
   }
-  #collapsibleNavbar .navbar-nav .nav-item.btnLog {
+  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog {
     width: 100%;
     height: 2.375rem;
     margin: 2px;
   }
-  .navbar .container-fluid .d-flex .navbar-toggler.icon-search {
-    display: inline;
+  .slider-content {
+    width: 25%;
+    height: 553px;
   }
   .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
     width: 34.6875rem;
