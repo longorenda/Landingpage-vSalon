@@ -81,11 +81,11 @@ body {
   position: relative;
 }
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
-  width: 30%;
+  width: 35%;
   height: 5rem;
   position: absolute;
   top: 30%;
-  left: 40%;
+  left: 34%;
   transform: translate(-50%, -50%);
   font-size: 38px;
   font-weight: 700;
@@ -95,10 +95,13 @@ body {
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay span {
   color: #3BB54A;
 }
+.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay p {
+  color: #2F4858;
+}
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
   position: absolute;
   top: 55%;
-  left: 25%;
+  left: 16.5%;
   font-size: 20px;
   width: 15.125rem;
   height: 3rem;
@@ -235,6 +238,13 @@ body {
     font-size: 28px;
     font-weight: 700;
     line-height: 42px;
+  }
+  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay .span-mb {
+    color: #2F4858;
+  }
+  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay .text-mb {
+    display: inline;
+    color: #3BB54A;
   }
   .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
     top: 50%;

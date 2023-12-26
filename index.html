@@ -16,7 +16,7 @@
   <!--Header Start-->
   <nav class="navbar navbar-expand-lg bg-white navbar-white">
     <div class="container-fluid">
-      <div class="navbar-brand col-lg-4 col-sm-4 d-flex flex-row-reverse">
+      <div class="navbar-brand col-lg-3 col-sm-4 d-flex flex-row-reverse">
         <a href="#"><img src="./img/Logo_vSalon.jpg" alt="logo" /></a>
       </div>
       <div class="d-flex">
@@ -28,7 +28,7 @@
           <img src="./feather-icon/mobile/feather-icon/menu.png" class="navbar-toggler-icon"></img>
         </button>
       </div>
-      <div class="collapse navbar-collapse col-lg-8 col-sm-8" id="collapsibleNavbar">
+      <div class="collapse navbar-collapse col-lg-9 col-sm-8" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link text-body" href="#">Trang chủ</a>
@@ -61,7 +61,7 @@
   </nav>
   <!--Header End-->
 
-  <!-- Slider main container -->
+  <!-- Slider Start -->
   <div class="slider-content container-fluid">
     <div class="swiper-container-slide">
       <div class="swiper-wrapper">
@@ -86,7 +86,7 @@
         <div class="swiper-slide">
           <img src="./slide/sld3.png" class="slide-sizeimg">
           <div class="text-overlay">
-            Gắn kết, khích lệ <span>nhân viên</span> qua ứng dụng di động
+            Gắn kết, khích lệ <span class="span-mb">nhân viên<p class="text-mb"> qua ứng dụng di động</p></span>
           </div>
           <button class="slide-btn">
             <a href="#" class="text-link">Dùng thử miễn phí</a>
@@ -95,9 +95,10 @@
       </div>
     </div>
   </div>
+  <!-- Slider End -->
 
   <!--Benefit Start-->
-  <div class="benefit-content contain-fluid" >
+  <div class="benefit-content container-fluid" >
     <!-- Header -->
     <div class="benefit-header text-center">
       <h1 class="header-text ">
@@ -146,17 +147,20 @@
   <!--Benefit End-->
 
   <!--Function Start-->
-  <div></div>
-  <!--Function Start-->
+  <div class="function-content container-fluid">
+
+  </div>
+  <!--Function End-->
+
   <!--Price Start-->
   <div></div>
   <!--Price End-->
   <script>
     var swiper1 = new Swiper('.swiper-container-slide', {
       loop: true,
-      autoplay: {
-        delay: 2000,
-      },
+      // autoplay: {
+      //   delay: 2000,
+      // },
     });
     var swiper2 = new Swiper(".swiper-container-benefit", {
       loop: true,

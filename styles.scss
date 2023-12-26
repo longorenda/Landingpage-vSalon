@@ -105,11 +105,11 @@
           }
 
           .text-overlay {
-            width: 30%;
+            width: 35%;
             height: 5rem;
             position: absolute;
             top: 30%;
-            left: 40%;
+            left: 34%;
             transform: translate(-50%, -50%);
             font-size: 38px;
             font-weight: 700;
@@ -119,12 +119,16 @@
             span {
               color: #3BB54A;
             }
+            p{
+              color: #2F4858;
+            }
+
           }
 
           button.slide-btn {
             position: absolute;
             top: 55%;
-            left: 25%;
+            left: 16.5%;
             font-size: 20px;
             width: 15.125rem;
             height: 3rem;
@@ -310,6 +314,13 @@
               font-size: 28px;
               font-weight: 700;
               line-height: 42px;
+              .span-mb{
+                color: #2F4858;
+              }
+              .text-mb{
+                display: inline;
+                color: #3BB54A;
+              }
             }
 
             button.slide-btn {
