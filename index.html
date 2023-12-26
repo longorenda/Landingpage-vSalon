@@ -97,7 +97,7 @@
   </div>
 
   <!--Benefit Start-->
-  <div class="contain-fluid" id="benefit">
+  <div class="benefit-content contain-fluid" >
     <!-- Header -->
     <div class="benefit-header text-center">
       <h1 class="header-text ">
@@ -141,10 +141,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-pagination"></div>
       </div>
-
     </div>
   </div>
-
   <!--Benefit End-->
 
   <!--Function Start-->
@@ -156,6 +154,9 @@
   <script>
     var swiper1 = new Swiper('.swiper-container-slide', {
       loop: true,
+      autoplay: {
+        delay: 2000,
+      },
     });
     var swiper2 = new Swiper(".swiper-container-benefit", {
       loop: true,

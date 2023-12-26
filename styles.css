@@ -19,11 +19,12 @@ body {
 }
 .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
   list-style-type: none;
+  margin-top: 1%;
 }
 .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px;
   white-space: nowrap;
   text-align: right;
@@ -112,28 +113,33 @@ body {
   color: white;
 }
 
-#benefit .benefit-header {
-  margin-top: 25px;
+.benefit-content .benefit-header {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-#benefit .benefit-header h1.header-text {
+.benefit-content .benefit-header h1.header-text {
   font-size: 36px;
   line-height: 43px;
   font-weight: 700;
 }
-#benefit .benefit-header h1.header-text span {
+.benefit-content .benefit-header h1.header-text span {
   color: #3BB54A;
 }
-#benefit .benefit-header p.header-text {
+.benefit-content .benefit-header p.header-text {
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
 }
 
 .swiper.swiper-container-benefit {
-  width: 60%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 5%;
   height: 100%;
+}
+.swiper.swiper-container-benefit .swiper-wrapper {
+  width: 60%;
 }
 .swiper.swiper-container-benefit .swiper-wrapper .swiper-slide {
   background-position: center;
@@ -170,10 +176,30 @@ body {
   line-height: 24px;
   padding: 5% 15%;
 }
+.swiper.swiper-container-benefit .swiper-button-control .swiper-button-prev,
+.swiper.swiper-container-benefit .swiper-button-control .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  margin-left: 15%;
+  margin-right: 15%;
+  color: #3BB54A;
+  transform: translateY(-50%);
+  background-color: #E1F3E3;
+  border: 2px solid #3BB54A;
+  border-radius: 100%;
+}
+.swiper.swiper-container-benefit .swiper-button-control .swiper-button-prev::after,
+.swiper.swiper-container-benefit .swiper-button-control .swiper-button-next::after {
+  --swiper-navigation-size: none;
+  text-align: center;
+  width: 100%;
+}
 
 @media (max-width: 576px) {
   .navbar .container-fluid #collapsibleNavbar {
-    background-color: white;
+    background-color: #3BB54A;
+    border: 5px solid #3BB54A;
+    border-radius: 4%;
   }
   .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
     margin: 1px;
@@ -193,8 +219,8 @@ body {
     background-image: linear-gradient(to left, #7EC341, #3BB54A);
   }
   .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog {
-    width: 100%;
-    height: 2.375rem;
+    width: 99.5%;
+    height: 2.75rem;
     margin: 2px;
   }
   .slider-content {
@@ -219,7 +245,27 @@ body {
     font-weight: 600;
     line-height: 30px;
   }
+  .benefit-content .benefit-header {
+    margin-top: 10%;
+  }
+  .benefit-content .benefit-header h1.header-text {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+  .benefit-content .benefit-header h1.header-text span {
+    color: #3BB54A;
+  }
+  .benefit-content .benefit-header p.header-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+  }
   .swiper.swiper-container-benefit {
+    padding-top: 1%;
+    padding-bottom: 10%;
+  }
+  .swiper.swiper-container-benefit .swiper-wrapper {
     width: 100%;
   }
   .swiper.swiper-container-benefit .swiper-wrapper .swiper-slide {
@@ -241,7 +287,9 @@ body {
     display: inline;
   }
   .navbar .container-fluid #collapsibleNavbar {
-    background-color: white;
+    background-color: #3BB54A;
+    border: 5px solid #3BB54A;
+    border-radius: 4%;
   }
   .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
     margin: 1px;
@@ -260,8 +308,8 @@ body {
     background-image: linear-gradient(to left, #7EC341, #3BB54A);
   }
   .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog {
-    width: 100%;
-    height: 2.375rem;
+    width: 99.5%;
+    height: 2.75rem;
     margin: 2px;
   }
   .slider-content {
@@ -284,13 +332,26 @@ body {
     font-weight: 600;
     line-height: 30px;
   }
-  .swiper.swiper-container-benefit {
-    width: 70%;
+  .benefit-content .benefit-header p.header-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .swiper.swiper-container-benefit .swiper-wrapper {
+    width: 90%;
   }
   .swiper.swiper-container-benefit .swiper-wrapper .swiper-slide {
-    width: 65%;
+    width: 43.5%;
   }
   .swiper.swiper-container-benefit .swiper-button-control {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link {
+    padding: 0 15px;
+  }
+  .swiper.swiper-container-benefit .swiper-button-control .swiper-pagination {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
