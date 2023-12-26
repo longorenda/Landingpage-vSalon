@@ -22,7 +22,7 @@ body {
   margin-top: 1%;
 }
 .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -196,6 +196,74 @@ body {
   --swiper-navigation-size: none;
   text-align: center;
   width: 100%;
+}
+
+.service-content {
+  margin-top: 2%;
+}
+.service-content .service-list {
+  width: 100%;
+  margin-bottom: 3%;
+}
+.service-content .service-list ul.tab-service {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-content .service-list ul.tab-service li {
+  cursor: pointer;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.service-content .service-list ul.tab-service li .img-service {
+  width: 56px;
+  height: 56px;
+}
+.service-content .service-list ul.tab-service li p {
+  padding-top: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.service-content .service-slide {
+  display: none;
+  width: 65%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.service-content .service-slide img {
+  width: 50%;
+  height: 50%;
+  border: 2px solid #3BB54A;
+  border-radius: 10px;
+}
+.service-content .service-slide .content {
+  margin-left: 5%;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.service-content .service-slide .content h4.tittle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.service-content .service-slide .content p.description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.service-content .service-slide.active {
+  display: flex !important;
 }
 
 @media (max-width: 576px) {

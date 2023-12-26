@@ -3,32 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Content Switch</title>
   <style>
-    .fixed-div {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #f1f1f1;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+    }
+
+    .categories {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .category {
+      cursor: pointer;
       padding: 10px;
-      border-radius: 0 0 50px 50px; /* Đường cong ở giữa dưới */
+      background-color: #eee;
+      margin-right: 10px;
     }
 
     .content {
-      margin-top: 50px;
-      padding: 20px;
+      display: none;
+    }
+
+    .content.active {
+      display: block;
     }
   </style>
-  <title>Curved Fixed Div Example</title>
 </head>
 <body>
-  <div class="fixed-div">
-    <p>This is a fixed div with a curved bottom.</p>
+
+<div class="container">
+  <ul class="categories">
+    <li class="category" data-category="category1">Category 1</li>
+    <li class="category" data-category="category2">Category 2</li>
+    <li class="category" data-category="category3">Category 3</li>
+  </ul>
+
+  <div class="content" id="category1">
+    <h2>Category 1 Content</h2>
+    <p>This is the content for Category 1.</p>
   </div>
 
-  <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
-    <!-- Nội dung khác của trang -->
+  <div class="content" id="category2">
+    <h2>Category 2 Content</h2>
+    <p>This is the content for Category 2.</p>
   </div>
+
+  <div class="content" id="category3">
+    <h2>Category 3 Content</h2>
+    <p>This is the content for Category 3.</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const categories = document.querySelectorAll('.category');
+    const contents = document.querySelectorAll('.content');
+
+    categories.forEach(category => {
+      category.addEventListener('click', function () {
+        const selectedCategory = this.dataset.category;
+
+        // Hide all contents
+        contents.forEach(content => {
+          content.classList.remove('active');
+        });
+
+        // Show the selected content
+        document.getElementById(selectedCategory).classList.add('active');
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
