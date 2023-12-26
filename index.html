@@ -321,6 +321,7 @@
       var defaultImage = defaultTab.querySelector('img');
       defaultImage.setAttribute('data-original-src', defaultImage.src);
       defaultImage.src = './feather-icon/service-1-active.png'; // Thay đổi thành ảnh mặc định
+      defaultTab.click();
     };
     function changeImage(element, newSrc) {
       // Kiểm tra xem đã click vào thẻ nào chưa
