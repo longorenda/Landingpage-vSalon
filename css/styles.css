@@ -286,6 +286,9 @@ span {
 }
 .price-content .price-container .price-header h1.header-text {
   margin-top: 3%;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
 }
 .price-content .price-container .price-header p.header-text {
   font-family: "Inter", sans-serif;
@@ -457,6 +460,78 @@ span {
   .swiper.swiper-container-benefit .swiper-button-control .swiper-button-prev,
   .swiper.swiper-container-benefit .swiper-button-control .swiper-button-next {
     display: none;
+  }
+  .service-content .service-list {
+    margin-top: 5%;
+  }
+  .service-content .service-list ul.tab-service li.active {
+    border: none !important;
+  }
+  .service-content .service-list ul.tab-service li.active p {
+    color: #3BB54A;
+  }
+  .service-content .service-slide {
+    width: 100%;
+  }
+  .service-content .service-slide img {
+    width: 100%;
+    height: 50%;
+  }
+  .service-content .service-slide .content {
+    margin: 2%;
+  }
+  .service-content .service-slide .content .tittle {
+    padding-top: 5%;
+  }
+  .service-content .service-slide .content .description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #4A6069;
+    padding-bottom: 15%;
+  }
+  .service-content .service-slide.active {
+    display: block !important;
+  }
+  .price-content .price-container {
+    width: 100%;
+  }
+  .price-content .price-container .price-header h1.header-text {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+  }
+  .price-content .price-container .price-header p.header-text {
+    display: none;
+  }
+  .price-content .price-container .price-content {
+    display: block;
+  }
+  .price-content .price-container .price-content .price-card {
+    margin-top: 10%;
+  }
+  .price-content .price-container .price-content .price-card .content-wapper .content-header p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+  .price-content .price-container .price-content .price-card .content-wapper .content-budget {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+  }
+  .price-content .price-container .price-content .price-card .content-wapper ul.content-benefit li {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .price-content .price-container .price-content .price-card .content-wapper ul.content-benefit li img {
+    margin-left: 5%;
+  }
+  .price-content .price-container .price-content .price-card button.card-button a.text-link {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
   }
 }
 @media (max-width: 991px) and (min-width: 577px) {
