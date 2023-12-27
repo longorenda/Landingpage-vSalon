@@ -2,6 +2,10 @@ body {
   color: #2F4858 !important;
 }
 
+span {
+  color: #3BB54A;
+}
+
 .navbar {
   color: #333333;
 }
@@ -58,6 +62,7 @@ body {
 .slider-content {
   width: 100%;
   max-width: 100%;
+  background-color: rgb(248, 248, 248);
 }
 .slider-content.container-fluid {
   padding: 0px;
@@ -93,12 +98,6 @@ body {
   text-align: left;
   z-index: 2;
 }
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay span {
-  color: #3BB54A;
-}
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay p {
-  color: #2F4858;
-}
 .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
   position: absolute;
   top: 55%;
@@ -120,8 +119,8 @@ body {
 .benefit-content {
   padding-top: 3%;
   background-color: rgb(248, 248, 248);
-  border-bottom-left-radius: 100% 20%;
-  border-bottom-right-radius: 100% 20%;
+  border-bottom-left-radius: 100% 30%;
+  border-bottom-right-radius: 100% 30%;
 }
 .benefit-content .benefit-header {
   margin-left: 5%;
@@ -131,9 +130,6 @@ body {
   font-size: 36px;
   line-height: 43px;
   font-weight: 700;
-}
-.benefit-content .benefit-header h1.header-text span {
-  color: #3BB54A;
 }
 .benefit-content .benefit-header p.header-text {
   font-size: 20px;
@@ -176,7 +172,6 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24.2px;
-  color: #3BB54A;
   margin-top: 10px;
 }
 .swiper.swiper-container-benefit .swiper-wrapper .swiper-slide .box-content p {
@@ -206,18 +201,23 @@ body {
 
 .service-content {
   margin-top: 3%;
+  margin-bottom: 3%;
 }
 .service-content .service-list {
   width: 100%;
   margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
 }
 .service-content .service-list ul.tab-service {
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 75%;
 }
 .service-content .service-list ul.tab-service li {
+  height: 100%;
   cursor: pointer;
   margin-left: 2%;
   margin-right: 2%;
@@ -237,7 +237,10 @@ body {
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
+}
+.service-content .service-list ul.tab-service li.active {
+  border-bottom: 3px solid #3BB54A;
 }
 .service-content .service-slide {
   display: none;
@@ -270,6 +273,105 @@ body {
 }
 .service-content .service-slide.active {
   display: flex !important;
+}
+
+.price-content {
+  padding-top: 3%;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  justify-content: center;
+}
+.price-content .price-container {
+  width: 60%;
+}
+.price-content .price-container .price-header h1.header-text {
+  margin-top: 3%;
+}
+.price-content .price-container .price-header p.header-text {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 2%;
+}
+.price-content .price-container .price-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.price-content .price-container .price-content .price-card {
+  background-color: white;
+  text-align: center;
+  letter-spacing: 0em;
+}
+.price-content .price-container .price-content .price-card .content-wapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.price-content .price-container .price-content .price-card .content-wapper .content-header {
+  padding-top: 10%;
+  background-color: bisque;
+  border-bottom-left-radius: 100% 50%;
+  border-bottom-right-radius: 100% 50%;
+}
+.price-content .price-container .price-content .price-card .content-wapper .content-header h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  color: #4F4F4F;
+}
+.price-content .price-container .price-content .price-card .content-wapper .content-header p {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #AEAEAE;
+}
+.price-content .price-container .price-content .price-card .content-wapper .content-budget {
+  color: #333333;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.price-content .price-container .price-content .price-card .content-wapper ul.content-benefit {
+  list-style-type: none;
+  margin: auto;
+  border-bottom: 1px dashed #BDBDBD;
+  width: 80%;
+  height: 100%;
+  padding: 0 0 10% 0;
+}
+.price-content .price-container .price-content .price-card .content-wapper ul.content-benefit li {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #4A6069;
+  text-align: left;
+  margin-top: 5%;
+}
+.price-content .price-container .price-content .price-card .content-wapper ul.content-benefit li img {
+  margin-right: 5%;
+}
+.price-content .price-container .price-content .price-card button.card-button {
+  margin: 10% 0;
+  width: 215px;
+  height: 48px;
+  border-radius: 36px;
+  border: 2px solid #3BB54A;
+  background-color: #3BB54A;
+}
+.price-content .price-container .price-content .price-card button.card-button a.text-link {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 576px) {
@@ -336,9 +438,6 @@ body {
     font-size: 28px;
     line-height: 34px;
     font-weight: 700;
-  }
-  .benefit-content .benefit-header h1.header-text span {
-    color: #3BB54A;
   }
   .benefit-content .benefit-header p.header-text {
     font-size: 16px;
@@ -416,6 +515,10 @@ body {
     font-weight: 600;
     line-height: 30px;
   }
+  .benefit-content {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+  }
   .benefit-content .benefit-header p.header-text {
     font-size: 20px;
     font-weight: 500;
@@ -429,6 +532,38 @@ body {
   }
   .swiper.swiper-container-benefit .swiper-button-control {
     display: none;
+  }
+  .service-content .service-list {
+    margin-top: 5%;
+  }
+  .service-content .service-list ul.tab-service li.active {
+    border: none !important;
+  }
+  .service-content .service-list ul.tab-service li.active p {
+    color: #3BB54A;
+  }
+  .service-content .service-slide {
+    width: 100%;
+  }
+  .service-content .service-slide img {
+    width: 100%;
+    height: 50%;
+  }
+  .service-content .service-slide .content {
+    margin: 2%;
+  }
+  .service-content .service-slide .content .tittle {
+    padding-top: 5%;
+  }
+  .service-content .service-slide .content .description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #4A6069;
+    padding-bottom: 15%;
+  }
+  .service-content .service-slide.active {
+    display: block !important;
   }
 }
 @media (min-width: 992px) {

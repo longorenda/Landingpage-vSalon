@@ -1,7 +1,12 @@
   $font-family: 'Inter', sans-serif;
+  $background-color: rgb(248, 248, 248);
 
   body {
     color: #2F4858 !important;
+  }
+
+  span {
+    color: #3BB54A;
   }
 
   //Header container
@@ -80,6 +85,7 @@
   .slider-content {
     width: 100%;
     max-width: 100%;
+    background-color: rgb(248, 248, 248);
 
     &.container-fluid {
       padding: 0px;
@@ -117,14 +123,6 @@
             text-align: left;
             z-index: 2;
 
-            span {
-              color: #3BB54A;
-            }
-
-            p {
-              color: #2F4858;
-            }
-
           }
 
           button.slide-btn {
@@ -154,8 +152,9 @@
   .benefit-content {
     padding-top: 3%;
     background-color: rgb(248, 248, 248);
-    border-bottom-left-radius: 100% 20%;
-    border-bottom-right-radius: 100% 20%;
+    border-bottom-left-radius: 100% 30%;
+    border-bottom-right-radius: 100% 30%;
+
     .benefit-header {
       margin-left: 5%;
       margin-right: 5%;
@@ -165,9 +164,6 @@
         line-height: 43px;
         font-weight: 700;
 
-        span {
-          color: #3BB54A;
-        }
       }
 
       p.header-text {
@@ -216,7 +212,6 @@
             font-size: 20px;
             font-weight: 700;
             line-height: 24.2px;
-            color: #3BB54A;
             margin-top: 10px;
           }
 
@@ -258,17 +253,23 @@
   //Service
   .service-content {
     margin-top: 3%;
+    margin-bottom: 3%;
 
     .service-list {
       width: 100%;
       margin-bottom: 3%;
+      display: flex;
+      justify-content: center;
+
       ul.tab-service {
         list-style-type: none;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 75%;
 
         li {
+          height: 100%;
           cursor: pointer;
           margin-left: 2%;
           margin-right: 2%;
@@ -290,8 +291,12 @@
             font-weight: 400;
             line-height: 18px;
             letter-spacing: 0em;
-            text-align: left;
+            text-align: center;
 
+          }
+
+          &.active {
+            border-bottom: 3px solid #3BB54A;
           }
         }
 
@@ -306,26 +311,28 @@
       align-items: center;
       margin: auto;
 
-      img{
+      img {
         width: 50%;
         height: 50%;
         border: 2px solid #3BB54A;
         border-radius: 10px;
 
       }
-      .content{
+
+      .content {
         margin-left: 5%;
         font-family: $font-family;
         letter-spacing: 0em;
         text-align: left;
 
-        .tittle{
+        .tittle {
           font-size: 20px;
           font-weight: 700;
           line-height: 30px;
 
         }
-        .description{
+
+        .description {
           font-size: 16px;
           font-weight: 500;
           line-height: 24px;
@@ -337,6 +344,130 @@
         display: flex !important;
       }
     }
+  }
+
+  //Price
+  .price-content {
+    padding-top: 3%;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+
+    .price-container {
+      width: 60%;
+
+      .price-header {
+
+        h1.header-text {
+          margin-top: 3%;
+        }
+
+        p.header-text {
+          font-family: $font-family;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 22px;
+          letter-spacing: 0em;
+          text-align: center;
+          margin-top: 2%;
+        }
+      }
+
+      .price-content {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+
+        .price-card {
+          background-color: white;
+          text-align: center;
+          letter-spacing: 0em;
+
+          .content-wapper {
+            margin-left: auto;
+            margin-right: auto;
+
+            .content-header {
+              padding-top: 10%;
+              background-color: bisque;
+              border-bottom-left-radius: 100% 50%;
+              border-bottom-right-radius: 100% 50%;
+
+              h4 {
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 34px;
+                color: #4F4F4F;
+
+
+              }
+
+              p {
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 10%;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18px;
+                color: #AEAEAE;
+              }
+            }
+
+            .content-budget {
+              color: #333333;
+              font-size: 36px;
+              font-weight: 600;
+              line-height: 44px;
+              margin-top: 10%;
+              margin-bottom: 10%;
+            }
+
+            ul.content-benefit {
+              list-style-type: none;
+              margin: auto;
+              border-bottom: 1px dashed #BDBDBD;
+              width: 80%;
+              height: 100%;
+              padding: 0 0 10% 0;
+
+              li {
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 24px;
+                color: #4A6069;
+                text-align: left;
+                margin-top: 5%;
+
+                img {
+                  margin-right: 5%;
+                }
+              }
+            }
+          }
+
+          button.card-button {
+            margin: 10% 0;
+            width: 215px;
+            height: 48px;
+            border-radius: 36px;
+            border: 2px solid #3BB54A;
+            background-color: #3BB54A;
+
+            a.text-link {
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 30px;
+              text-decoration: none;
+              color: white;
+            }
+          }
+
+        }
+
+        // .price-note {}
+      }
+    }
+
   }
 
   //RESPONSIVE
@@ -437,9 +568,6 @@
           line-height: 34px;
           font-weight: 700;
 
-          span {
-            color: #3BB54A;
-          }
         }
 
         p.header-text {
@@ -564,6 +692,9 @@
 
     //Benefit Header
     .benefit-content {
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset;
+
       .benefit-header {
         p.header-text {
           font-size: 20px;
@@ -589,6 +720,58 @@
       }
     }
 
+    //Service
+    .service-content {
+      .service-list {
+        margin-top: 5%;
+        ul.tab-service {
+
+          li {
+
+            &.active {
+              p {
+                color: #3BB54A;
+              }
+
+              border: none !important;
+            }
+          }
+
+        }
+
+      }
+
+      .service-slide {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 50%;
+
+        }
+
+        .content {
+          margin: 2%;
+
+          .tittle {
+            padding-top: 5%;
+
+          }
+
+          .description {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #4A6069;
+            padding-bottom: 15%;
+          }
+        }
+
+        &.active {
+          display: block !important;
+        }
+      }
+    }
   }
 
   // Large devices (desktops, 992px and up)

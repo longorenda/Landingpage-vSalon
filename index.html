@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -47,7 +47,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-body">
-              <img src="./flags/VN.png" alt="Vietnam Flag" /> Vi
+              <img src="./feather-icon/flags/VN.png" alt="Vietnam Flag" /> Vi
               <img src="./feather-icon/chevron-down.png" alt="Dropdown Icon" />
             </a>
           </li>
@@ -66,7 +66,7 @@
     <div class="swiper-container-slide">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./slide/sld1.png" class="slide-sizeimg">
+          <img src="./img/slide/sld1.png" class="slide-sizeimg">
           <h1 class="text-overlay">
             Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
           </h1>
@@ -75,7 +75,7 @@
           </button>
         </div>
         <div class="swiper-slide">
-          <img src="./slide/sld2.png" class="slide-sizeimg">
+          <img src="./img/slide/sld2.png" class="slide-sizeimg">
           <div class="text-overlay">
             Tương tác thường xuyên với <span>Khách hàng</span> thân thiết
           </div>
@@ -84,7 +84,7 @@
           </button>
         </div>
         <div class="swiper-slide">
-          <img src="./slide/sld3.png" class="slide-sizeimg">
+          <img src="./img/slide/sld3.png" class="slide-sizeimg">
           <div class="text-overlay">
             Gắn kết, khích lệ <span class="span-mb">nhân viên<p class="text-mb"> qua ứng dụng di động</p></span>
           </div>
@@ -111,7 +111,7 @@
       <div class="swiper-wrapper">
         <!-- Slide start -->
         <div class="swiper-slide">
-          <img src="./feather-icon/benefit-icon-1.png" />
+          <img src="./feather-icon/benefit/benefit-icon-1.png" />
           <div class="box-content">
             <span>Gắn kết khách hàng</span>
             <p>Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.</p>
@@ -120,7 +120,7 @@
         <!-- Slide end -->
         <!-- Slide start -->
         <div class="swiper-slide">
-          <img src="./feather-icon/benefit-icon-2.png" />
+          <img src="./feather-icon/benefit/benefit-icon-2.png" />
           <div class="box-content">
             <span>Điều phối lịch hẹn</span>
             <p>Không còn lo lắng khi quên lịch hẹn với khách hàng.</p>
@@ -129,7 +129,7 @@
         <!-- Slide end -->
         <!-- Slide start -->
         <div class="swiper-slide">
-          <img src="./feather-icon/benefit-icon-3.png" />
+          <img src="./feather-icon/benefit/benefit-icon-3.png" />
           <div class="box-content">
             <span>Quản lý hiệu quả</span>
             <p>Giúp nhân viên tăng năng xuất làm việc. Quản lý hiệu quả từ xa</p>
@@ -150,39 +150,46 @@
   <div class="service-content container-fluid">
     <div class="service-list">
       <ul class="tab-service">
-        <li class="tab" data-category="tab1" onclick="changeImage(this,'./feather-icon/service-1-active.png')">
-          <img src="./feather-icon/service-1.png" alt="quanlychuoisalon" class="img-service">
+        <li class="tab col active" data-category="tab1"
+          onclick="changeImage(this,'./feather-icon/service-tab/active/service-tab1-active.png')">
+          <img src="./feather-icon/service-tab/non-active/service-tab1.png" alt="quanlychuoisalon" class="img-service">
           <p>Quản lý chuỗi salon</p>
         </li>
-        <li class="tab" data-category="tab2" onclick="changeImage(this,'./feather-icon/service-2-active.png')">
-          <img src="./feather-icon/service-2.png" alt="quanlylichhen" class="img-service">
+        <li class="tab col" data-category="tab2"
+          onclick="changeImage(this,'./feather-icon/service-tab/active/service-2-active.png')">
+          <img src="./feather-icon/service-tab/non-active/service-tab2.png" alt="quanlylichhen" class="img-service">
           <p>Quản lý lịch hẹn</p>
         </li>
-        <li class="tab" data-category="tab3" onclick="changeImage(this,'./feather-icon/service-3-active.png')">
-          <img src="./feather-icon/service-3.png" alt="quanlythanhvien" class="img-service">
+        <li class="tab col" data-category="tab3"
+          onclick="changeImage(this,'./feather-icon/service-tab/active/service-3-active.png')">
+          <img src="./feather-icon/service-tab/non-active/service-tab3.png" alt="quanlythanhvien" class="img-service">
           <p>Quản lý thành viên</p>
         </li>
-        <li class="tab" data-category="tab4" onclick="changeImage(this,'./feather-icon/service-4-active.png')">
-          <img src="./feather-icon/service-4.png" alt="banhang" class="img-service">
+        <li class="tab col" data-category="tab4"
+          onclick="changeImage(this,'./feather-icon/service-tab/active/service-4-active.png')">
+          <img src="./feather-icon/service-tab/non-active/service-tab4.png" alt="banhang" class="img-service">
           <p>Bán hàng</p>
         </li>
-        <li class="tab" data-category="tab5" onclick="changeImage(this,'./feather-icon/service-5-active.png')">
-          <img src="./feather-icon/service-5.png" alt="quanlykho" class="img-service">
+        <li class="tab col" data-category="tab5"
+          onclick="changeImage(this,'./feather-icon/service-tab/active/service-5-active.png')">
+          <img src="./feather-icon/service-tab/non-active/service-tab5.png" alt="quanlykho" class="img-service">
           <p>Quản lý kho</p>
         </li>
-        <li class="tab" data-category="tab6" onclick="changeImage(this,'./feather-icon/service-6-active.png')">
-          <img src="./feather-icon/service-6.png" alt="quanlynhanvien" class="img-service">
+        <li class="tab col" data-category="tab6"
+          onclick="changeImage(this,'./feather-icon/service-tab/active/service-6-active.png')">
+          <img src="./feather-icon/service-tab/non-active/service-tab6.png" alt="quanlynhanvien" class="img-service">
           <p>Quản lý nhân viên</p>
         </li>
-        <li class="tab" data-category="tab7" onclick="changeImage(this,'./feather-icon/service-7-active.png')">
-          <img src="./feather-icon/service-7.png" alt="baocaothongke" class="img-service">
+        <li class="tab col" data-category="tab7"
+          onclick="changeImage(this,'./feather-icon/service-tab/active/service-7-active.png')">
+          <img src="./feather-icon/service-tab/non-active/service-tab7.png" alt="baocaothongke" class="img-service">
           <p>Báo cáo thống kê</p>
         </li>
       </ul>
     </div>
     <div class="service-slide active" id="tab1">
-      <img src="./img/service-content-img-1.png" alt="img analyze" class="col-6">
-      <div class="content col-6">
+      <img src="./img/service-image/service-content-img-1.png" alt="img analyze" class="col-6">
+      <div class="content col-lg-6">
         <h4 class="tittle">Tổng hợp dữ liệu nhanh chóng, chính xác</h4>
         <p class="description">
           Báo cáo thông tin lịch hẹn, doanh thu… chi tiết đến từng salon trong chuỗi. Báo cáo tổng hợp cho số liệu tổng
@@ -191,8 +198,8 @@
       </div>
     </div>
     <div class="service-slide" id="tab2">
-      <img src="./img/service-content-img-2.png" alt="img analyze" class="col-6">
-      <div class="content col-6">
+      <img src="./img/service-image/service-content-img-2.png" alt="img analyze" class="col-6">
+      <div class="content col-lg-6">
         <h4 class="tittle">Quản lý lịch hẹn</h4>
         <p class="description">
           Quản lý lịch hẹn giúp cho salon sắp xếp công việc hiệu quả. Tăng năng suất làm việc của nhân viên, tăng trải
@@ -201,8 +208,8 @@
       </div>
     </div>
     <div class="service-slide" id="tab3">
-      <img src="./img/service-content-img-3.png" alt="img analyze" class="col-6">
-      <div class="content col-6">
+      <img src="./img/service-image/service-content-img-3.png" alt="img analyze" class="col-6">
+      <div class="content col-lg-6">
         <h4 class="tittle">Duy trì giữ chân khách hàng</h4>
         <p class="description">
           Với thẻ thành viên, salon sẽ nhận diện được khách hàng thân thiết, từ đó phục vụ khách hàng tốt hơn để giữ
@@ -211,8 +218,8 @@
       </div>
     </div>
     <div class="service-slide" id="tab4">
-      <img src="./img/service-content-img-4.png" alt="img analyze" class="col-6">
-      <div class="content col-6">
+      <img src="./img/service-image/service-content-img-4.png" alt="img analyze" class="col-6">
+      <div class="content col-lg-6">
         <h4 class="tittle">Tạo khuyến mại nhanh chóng</h4>
         <p class="description">
           Chỉ mất vài phút, bạn đã có thể TẠO VÀ ÁP DỤNG KHUYẾN MẠI cho từng mặt hàng hay nhóm hàng, giá trị khuyến mại
@@ -225,8 +232,8 @@
       </div>
     </div>
     <div class="service-slide" id="tab5">
-      <img src="./img/service-content-img-5.png" alt="img analyze" class="col-6">
-      <div class="content col-6">
+      <img src="./img/service-image/service-content-img-5.png" alt="img analyze" class="col-6">
+      <div class="content col-lg-6">
         <h4 class="tittle">Nắm bắt hàng tồn kho, bổ sung hàng hóa kịp thời</h4>
         <p class="description">
           vSalon giúp bạn quản lý tồn kho chính xác tới từng mặt hàng cụ thể và chi tiết trong từng chi nhánh, gạt đi
@@ -237,8 +244,8 @@
       </div>
     </div>
     <div class="service-slide" id="tab6">
-      <img src="./img/service-content-img-6.png" alt="img analyze" class="col-6">
-      <div class="content col-6">
+      <img src="./img/service-image/service-content-img-6.png" alt="img analyze" class="col-6">
+      <div class="content col-lg-6">
         <h4 class="tittle">Lập lịch làm việc khoa học</h4>
         <ul class="description">
           <li>Quản lý ca làm việc</li>
@@ -249,8 +256,8 @@
       </div>
     </div>
     <div class="service-slide" id="tab7">
-      <img src="./img/service-content-img-7.png" alt="img analyze" class="col-6">
-      <div class="content col-6">
+      <img src="./img/service-image/service-content-img-7.png" alt="img analyze" class="col-6">
+      <div class="content col-lg-6">
         <h4 class="tittle">Chúng tôi cung cấp những con số bạn cần</h4>
         <p class="description">
           Bạn muốn nắm được doanh thu bán hàng cụ thể đến từng ngày, lịch sử giao dịch mua hàng, doanh số bán hàng của
@@ -265,83 +272,92 @@
   <!--Service End-->
 
   <!--Price Start-->
-  <div></div>
+  <div class="price-content container-fluid">
+    <div class="price-container">
+      <div class="price-header text-center">
+        <h1 class="header-text">Bảng giá phần mềm quản lý <span>Spa, salon vSalon</span></h1>
+        <p class="header-text">Hãy lựa chọn gói giải pháp phù hợp với nhu cầu của bạn và dùng thử miễn phí 30 ngày</p>
+      </div>
+      <div class="price-content">
+        <!--Card 1 Start-->
+        <div class="price-card col">
+          <div class="content-wapper">
+            <div class="content-header">
+              <h4>GÓI CƠ BẢN</h4>
+              <p>Dành cho cửa hàng nhỏ, mới bắt đầu kinh doanh</p>
+            </div>
+            <div class="content-budget">
+              139.000 vnd
+            </div>
+            <ul class="content-benefit">
+              <li>
+                <img src="./feather-icon/check-circle-green.png" alt="">
+                1 cửa hàng/tháng
+              </li>
+              <li>
+                <img src="./feather-icon/check-circle-green.png" alt="">
+                Không giới hạn người dùng
+              </li>
+              <li>
+                <img src="./feather-icon/check-circle-green.png" alt="">
+                Không giới hạn tính năng
+              </li>
+              <li>
+                <img src="./feather-icon/check-circle-green.png" alt="">
+                Không phí khởi tạo
+              </li>
+            </ul>
+          </div>
+          <button class="card-button">
+            <a href="#" class="text-link">Dùng thử miễn phí</a>
+          </button>
+        </div>
+        <!--Card 1 End-->
+        <div class="price-note col"></div>
+        <!--Card 2 Start-->
+        <div class="price-card col">
+          <div class="content-wapper">
+            <div class="content-header">
+              <h4 class="text-warning">GÓI CƠ BẢN</h4>
+              <p>Dành cho mô hình kinh doanh chuỗi</p>
+            </div>
+            <div class="content-budget">
+              139.000 vnd
+            </div>
+            <ul class="content-benefit">
+              <li>
+                <img src="./feather-icon/check-circle-orange.png" alt="">
+                1 cửa hàng/tháng
+              </li>
+              <li>
+                <img src="./feather-icon/check-circle-orange.png" alt="">
+                Không giới hạn người dùng
+              </li>
+              <li>
+                <img src="./feather-icon/check-circle-orange.png" alt="">
+                Thêm chi nhánh 99.000 đ/tháng
+              </li>
+              <li>
+                <img src="./feather-icon/check-circle-orange.png" alt="">
+                Không giới hạn tính năng
+              </li>
+              <li>
+                <img src="./feather-icon/check-circle-orange.png" alt="">
+                Không phí khởi tạo
+              </li>
+            </ul>
+          </div>
+          <button class="card-button">
+            <a href="#" class="text-link">Dùng thử miễn phí</a>
+          </button>
+        </div>
+        <!--Card 2 End-->
+      </div>
+    </div>
+  </div>
   <!--Price End-->
-  <script>
-    var swiper1 = new Swiper('.swiper-container-slide', {
-      loop: true,
-      // autoplay: {
-      //   delay: 2000,
-      // },
-    });
-    var swiper2 = new Swiper('.swiper-container-benefit', {
-      loop: true,
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 40,
-        depth: 300,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabs = document.querySelectorAll('.tab');
-      const contents = document.querySelectorAll('.service-slide');
+  <script src="script.js"></script>
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function () {
-          const selectedCategory = this.dataset.category;
-
-          // Hide all contents
-          contents.forEach(content => {
-            content.classList.remove('active');
-          });
-
-          // Show the selected content
-          document.getElementById(selectedCategory).classList.add('active');
-        });
-      });
-    });
-
-    var last_image_Clicked;
-
-    window.onload = function() {
-      var defaultTab = document.querySelector('.tab');
-      var defaultImage = defaultTab.querySelector('img');
-      defaultImage.setAttribute('data-original-src', defaultImage.src);
-      defaultImage.src = './feather-icon/service-1-active.png'; // Thay đổi thành ảnh mặc định
-      defaultTab.click();
-    };
-    function changeImage(element, newSrc) {
-      // Kiểm tra xem đã click vào thẻ nào chưa
-      if (last_image_Clicked) {
-        // Nếu đã click vào một thẻ trước đó, đặt lại ảnh của nó
-        var lastImage = last_image_Clicked.querySelector('img');
-        lastImage.src = lastImage.getAttribute('data-original-src');
-      }
-
-      // Lưu thẻ hiện tại đã được click và nguồn ảnh ban đầu
-      last_image_Clicked = element;
-      var imageElement = element.querySelector('img');
-      if (!imageElement.getAttribute('data-original-src')) {
-        imageElement.setAttribute('data-original-src', imageElement.src);
-      }
-
-      // Thay đổi nguồn ảnh của thẻ hiện tại
-      imageElement.src = newSrc;
-    }
-  </script>
 </body>
 
 </html>
