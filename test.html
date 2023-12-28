@@ -3,110 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Category Content Switch</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-    }
-
-    .categories {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .row {
       display: flex;
-    }
-
-    .category {
-      cursor: pointer;
+      justify-content: space-between;
+      align-items: center;
       padding: 10px;
-      background-color: #eee;
-      margin-right: 10px;
+      background-color: #f0f0f0;
+    }
+
+    .icon-nav {
       display: flex;
-      flex-direction: column;
+      justify-content: flex-end;
       align-items: center;
     }
 
-    .category-img {
-      max-width: 100px;
-      max-height: 100px;
-      margin-bottom: 5px;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .content {
-      display: none;
-    }
-
-    .content.active {
-      display: block;
-    }
-
-    .category-img.active {
-      transform: scale(1.2); /* Example: Increase size when active */
+    .icon-menu {
+      margin-left: 10px;
+      /* Các thuộc tính CSS khác cho icon-menu */
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <ul class="categories">
-    <li class="category" data-category="category1" onclick="changeCategory('category1')">
-      <img class="category-img" src="category1.jpg" alt="Category 1">
-      Category 1
-    </li>
-    <li class="category" data-category="category2" onclick="changeCategory('category2')">
-      <img class="category-img" src="category2.jpg" alt="Category 2">
-      Category 2
-    </li>
-    <li class="category" data-category="category3" onclick="changeCategory('category3')">
-      <img class="category-img" src="category3.jpg" alt="Category 3">
-      Category 3
-    </li>
-  </ul>
-
-  <div class="content" id="category1">
-    <h2>Category 1 Content</h2>
-    <p>This is the content for Category 1.</p>
+<div class="row">
+  <div class="navbar-brand col-lg col-sm-6">
+    <a href="#" class="logo"><img src="./img/Logo_vSalon.jpg" alt="logo" /></a>
   </div>
-
-  <div class="content" id="category2">
-    <h2>Category 2 Content</h2>
-    <p>This is the content for Category 2.</p>
-  </div>
-
-  <div class="content" id="category3">
-    <h2>Category 3 Content</h2>
-    <p>This is the content for Category 3.</p>
+  <div class="icon-nav col-sm-6">
+    <button class="navbar-toggler icon-search" type="button" style="border: none;">
+      <img src="./feather-icon/search.png" alt="Search"></img>
+    </button>
+    <button class="navbar-toggler icon-menu" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavbar" style="border: none;">
+      <img src="./feather-icon/mobile/feather-icon/menu.png" class="navbar-toggler-icon" alt="Menu"></img>
+    </button>
   </div>
 </div>
 
-<script>
-  function changeCategory(category) {
-    // Hide all contents
-    document.querySelectorAll('.content').forEach(content => {
-      content.classList.remove('active');
-    });
-
-    // Show the selected content
-    document.getElementById(category).classList.add('active');
-
-    // Reset all category images
-    document.querySelectorAll('.category-img').forEach(img => {
-      img.classList.remove('active');
-    });
-
-    // Highlight the selected category image
-    const selectedImg = document.querySelector(`[data-category="${category}"] .category-img`);
-    selectedImg.classList.add('active');
-  }
-</script>
+<!-- Các phần tử và nội dung khác của trang web -->
 
 </body>
 </html>

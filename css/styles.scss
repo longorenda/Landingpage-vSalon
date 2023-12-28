@@ -17,17 +17,19 @@
     .container {
       height: 3.5rem;
       max-width: 1200px;
+      min-width: 375px;
+
       .row {
         width: 100%;
-        
         display: flex; // Sử dụng display: flex để biến các phần tử con thành các phần tử linh hoạt theo chiều ngang
         flex-wrap: nowrap; // Ngăn chặn quấn dòng khi không đủ không gian
         justify-content: space-between; // Các phần tử con sẽ tự động căn cách xa nhau
-
+        align-items: center;
+        
         .navbar-brand {
           display: flex;
           justify-content: space-between; // Các phần tử con sẽ tự động căn cách xa nhau
-          align-items: center; // Căn giữa theo chiều dọc
+          align-items: end; // Căn giữa theo chiều dọc
 
           .logo {
             margin-left: auto;
@@ -44,7 +46,10 @@
           }
         }
 
-        #collapsibleNavbar {
+        
+      }
+
+      #collapsibleNavbar {
           z-index: 2;
 
           .navbar-nav {
@@ -53,7 +58,8 @@
             .nav-item {
               list-style-type: none;
               margin-top: 1%;
-
+              margin-left: 10px;
+              margin-right: 10px;
               .nav-link {
 
                 &.text-body {
@@ -97,7 +103,6 @@
             }
           }
         }
-      }
 
     }
 
@@ -514,9 +519,12 @@
       .container {
 
         .row {
-          max-width: 375px;
+          width: 50%;
+          margin-left: 0;
+          margin-right: 0;
 
           .navbar-brand {
+            padding-left: 3px;
             .logo {
               margin-left: 0;
             }
@@ -524,10 +532,14 @@
 
           .icon-nav {
             display: flex;
-            
+            align-items: center;
+            justify-content: end;
+            padding-right: 3px;
           }
+          
+        }
 
-          #collapsibleNavbar {
+        #collapsibleNavbar {
             background-color: #3BB54A;
             border: 5px solid #3BB54A;
             border-radius: 4%;
@@ -562,7 +574,6 @@
               }
             }
           }
-        }
 
       }
     }
@@ -790,6 +801,7 @@
 
     //Header container
     .navbar {
+
       .container {
         padding: 0;
         max-width: 100%;
@@ -816,8 +828,9 @@
               }
             }
           }
-
-          #collapsibleNavbar {
+        }
+        
+        #collapsibleNavbar {
             background-color: #3BB54A;
             border: 5px solid #3BB54A;
             border-radius: 4%;
@@ -850,7 +863,6 @@
               }
             }
           }
-        }
 
       }
     }
