@@ -12,71 +12,93 @@
   //Header container
   .navbar {
     color: #333333;
+    height: 80px;
 
-    .container-fluid {
+    .container {
       height: 3.5rem;
+      max-width: 1200px;
+      .row {
+        width: 100%;
+        
+        display: flex; // Sử dụng display: flex để biến các phần tử con thành các phần tử linh hoạt theo chiều ngang
+        flex-wrap: nowrap; // Ngăn chặn quấn dòng khi không đủ không gian
+        justify-content: space-between; // Các phần tử con sẽ tự động căn cách xa nhau
 
-      .d-flex {
-        .navbar-toggler {
-          &.icon-search {
-            display: none;
+        .navbar-brand {
+          display: flex;
+          justify-content: space-between; // Các phần tử con sẽ tự động căn cách xa nhau
+          align-items: center; // Căn giữa theo chiều dọc
+
+          .logo {
+            margin-left: auto;
           }
         }
-      }
 
-      #collapsibleNavbar {
-        z-index: 2;
+        .icon-nav {
+          display: none;
 
-        .navbar-nav {
-          display: flex;
+          .navbar-toggler {
+            &.icon-search {
+              display: none;
+            }
+          }
+        }
 
-          .nav-item {
-            list-style-type: none;
-            margin-top: 1%;
+        #collapsibleNavbar {
+          z-index: 2;
 
-            .nav-link {
+          .navbar-nav {
+            display: flex;
 
-              &.text-body {
-                font-family: $font-family, sans-serif;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 20px;
-                white-space: nowrap;
-                text-align: right;
+            .nav-item {
+              list-style-type: none;
+              margin-top: 1%;
+
+              .nav-link {
+
+                &.text-body {
+                  font-family: $font-family, sans-serif;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 20px;
+                  white-space: nowrap;
+                  text-align: right;
+                  color: #3BB54A;
+
+                  &:hover {
+                    font-weight: 700;
+                    color: #3BB54A !important; // Màu chữ khi hover
+                  }
+                }
+
+              }
+
+              &.btnLog {
+                width: 7.1875rem;
+                height: 2.375rem;
+                border-radius: 22px;
+                border: 2px solid #3BB54A;
+                background-color: white;
                 color: #3BB54A;
+                padding: 8px;
+                margin: 6px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                white-space: nowrap;
+                line-height: 0px;
+                font-weight: bold;
 
                 &:hover {
-                  font-weight: 700;
-                  color: #3BB54A !important; // Màu chữ khi hover
+                  color: white;
+                  background-image: linear-gradient(to left, #7EC341, #3BB54A);
                 }
-              }
-
-            }
-
-            &.btnLog {
-              width: 7.1875rem;
-              height: 2.375rem;
-              border-radius: 22px;
-              border: 2px solid #3BB54A;
-              background-color: white;
-              color: #3BB54A;
-              padding: 8px;
-              margin: 6px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              white-space: nowrap;
-              line-height: 0px;
-              font-weight: bold;
-
-              &:hover {
-                color: white;
-                background-image: linear-gradient(to left, #7EC341, #3BB54A);
               }
             }
           }
         }
       }
+
     }
 
   }
@@ -489,41 +511,59 @@
     //Header container
     .navbar {
 
-      .container-fluid {
-        #collapsibleNavbar {
-          background-color: #3BB54A;
-          border: 5px solid #3BB54A;
-          border-radius: 4%;
+      .container {
 
-          .navbar-nav {
-            .nav-item {
-              margin: 1px;
+        .row {
+          max-width: 375px;
 
-              .nav-link {
-                text-decoration: none;
+          .navbar-brand {
+            .logo {
+              margin-left: 0;
+            }
+          }
 
-                &.text-body {
-                  border-radius: 22px;
-                  border: 2px solid #3BB54A;
-                  background-color: white;
-                  text-align: center;
-                  justify-content: center;
+          .icon-nav {
+            display: flex;
+            
+          }
 
-                  &:hover {
-                    color: white !important;
-                    background-image: linear-gradient(to left, #7EC341, #3BB54A);
+          #collapsibleNavbar {
+            background-color: #3BB54A;
+            border: 5px solid #3BB54A;
+            border-radius: 4%;
+
+            .navbar-nav {
+
+              .nav-item {
+                margin: 1px;
+
+                .nav-link {
+                  text-decoration: none;
+
+                  &.text-body {
+                    border-radius: 22px;
+                    border: 2px solid #3BB54A;
+                    background-color: white;
+                    text-align: center;
+                    justify-content: center;
+
+                    &:hover {
+                      color: white !important;
+                      background-image: linear-gradient(to left, #7EC341, #3BB54A);
+                    }
                   }
                 }
-              }
 
-              &.btnLog {
-                width: 99.5%;
-                height: 2.75rem;
-                margin: 2px;
+                &.btnLog {
+                  width: 99.5%;
+                  height: 2.75rem;
+                  margin: 2px;
+                }
               }
             }
           }
         }
+
       }
     }
 
@@ -750,54 +790,68 @@
 
     //Header container
     .navbar {
-      .container-fluid {
-        .navbar-brand {
-          padding-left: 3%;
-        }
+      .container {
+        padding: 0;
+        max-width: 100%;
 
-        .d-flex {
-          display: inline-block !important;
-
-          .navbar-toggler {
-            &.icon-search {
-              display: inline;
+        .row {
+          width: 100%;
+          margin: 0;
+          
+          .navbar-brand {    
+            padding-left: 32px;
+            padding-top: 2px;
+            .logo {
+              margin-left: 0;
             }
           }
-        }
 
-        #collapsibleNavbar {
-          background-color: #3BB54A;
-          border: 5px solid #3BB54A;
-          border-radius: 4%;
+          .icon-nav {
+            display: flex;
+            justify-content: right;
+            padding-right: 0;
+            .navbar-toggler {
+              &.icon-search {
+                display: inline;
+              }
+            }
+          }
 
-          .navbar-nav {
-            .nav-item {
-              margin: 1px;
+          #collapsibleNavbar {
+            background-color: #3BB54A;
+            border: 5px solid #3BB54A;
+            border-radius: 4%;
 
-              .nav-link {
-                text-decoration: none;
+            .navbar-nav {
+              .nav-item {
+                margin: 1px;
 
-                &.text-body {
-                  border-radius: 22px;
-                  border: 2px solid #3BB54A;
-                  background-color: white;
-                  text-align: center;
+                .nav-link {
+                  text-decoration: none;
 
-                  &:hover {
-                    color: white !important;
-                    background-image: linear-gradient(to left, #7EC341, #3BB54A);
+                  &.text-body {
+                    border-radius: 22px;
+                    border: 2px solid #3BB54A;
+                    background-color: white;
+                    text-align: center;
+
+                    &:hover {
+                      color: white !important;
+                      background-image: linear-gradient(to left, #7EC341, #3BB54A);
+                    }
                   }
                 }
-              }
 
-              &.btnLog {
-                width: 99.5%;
-                height: 2.75rem;
-                margin: 2px;
+                &.btnLog {
+                  width: 99.5%;
+                  height: 2.75rem;
+                  margin: 2px;
+                }
               }
             }
           }
         }
+
       }
     }
 

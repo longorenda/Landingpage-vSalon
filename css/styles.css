@@ -9,24 +9,43 @@ span {
 
 .navbar {
   color: #333333;
+  height: 80px;
 }
-.navbar .container-fluid {
+.navbar .container {
   height: 3.5rem;
+  max-width: 1200px;
 }
-.navbar .container-fluid .d-flex .navbar-toggler.icon-search {
+.navbar .container .row {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.navbar .container .row .navbar-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .container .row .navbar-brand .logo {
+  margin-left: auto;
+}
+.navbar .container .row .icon-nav {
   display: none;
 }
-.navbar .container-fluid #collapsibleNavbar {
+.navbar .container .row .icon-nav .navbar-toggler.icon-search {
+  display: none;
+}
+.navbar .container .row #collapsibleNavbar {
   z-index: 2;
 }
-.navbar .container-fluid #collapsibleNavbar .navbar-nav {
+.navbar .container .row #collapsibleNavbar .navbar-nav {
   display: flex;
 }
-.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
+.navbar .container .row #collapsibleNavbar .navbar-nav .nav-item {
   list-style-type: none;
   margin-top: 1%;
 }
-.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+.navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
   font-family: "Inter", sans-serif, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -35,11 +54,11 @@ span {
   text-align: right;
   color: #3BB54A;
 }
-.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+.navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
   font-weight: 700;
   color: #3BB54A !important;
 }
-.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog {
+.navbar .container .row #collapsibleNavbar .navbar-nav .nav-item.btnLog {
   width: 7.1875rem;
   height: 2.375rem;
   border-radius: 22px;
@@ -55,7 +74,7 @@ span {
   line-height: 0px;
   font-weight: bold;
 }
-.navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog:hover {
+.navbar .container .row #collapsibleNavbar .navbar-nav .nav-item.btnLog:hover {
   color: white;
   background-image: linear-gradient(to left, #7EC341, #3BB54A);
 }
@@ -384,29 +403,38 @@ span {
 }
 
 @media (max-width: 576px) {
-  .navbar .container-fluid #collapsibleNavbar {
+  .navbar .container .row {
+    max-width: 375px;
+  }
+  .navbar .container .row .navbar-brand .logo {
+    margin-left: 0;
+  }
+  .navbar .container .row .icon-nav {
+    display: flex;
+  }
+  .navbar .container .row #collapsibleNavbar {
     background-color: #3BB54A;
     border: 5px solid #3BB54A;
     border-radius: 4%;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item {
     margin: 1px;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link {
     text-decoration: none;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
     border-radius: 22px;
     border: 2px solid #3BB54A;
     background-color: white;
     text-align: center;
     justify-content: center;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
     color: white !important;
     background-image: linear-gradient(to left, #7EC341, #3BB54A);
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item.btnLog {
     width: 99.5%;
     height: 2.75rem;
     margin: 2px;
@@ -541,37 +569,51 @@ span {
   }
 }
 @media (max-width: 991px) and (min-width: 577px) {
-  .navbar .container-fluid .navbar-brand {
-    padding-left: 3%;
+  .navbar .container {
+    padding: 0;
+    max-width: 100%;
   }
-  .navbar .container-fluid .d-flex {
-    display: inline-block !important;
+  .navbar .container .row {
+    width: 100%;
+    margin: 0;
   }
-  .navbar .container-fluid .d-flex .navbar-toggler.icon-search {
+  .navbar .container .row .navbar-brand {
+    padding-left: 32px;
+    padding-top: 2px;
+  }
+  .navbar .container .row .navbar-brand .logo {
+    margin-left: 0;
+  }
+  .navbar .container .row .icon-nav {
+    display: flex;
+    justify-content: right;
+    padding-right: 0;
+  }
+  .navbar .container .row .icon-nav .navbar-toggler.icon-search {
     display: inline;
   }
-  .navbar .container-fluid #collapsibleNavbar {
+  .navbar .container .row #collapsibleNavbar {
     background-color: #3BB54A;
     border: 5px solid #3BB54A;
     border-radius: 4%;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item {
     margin: 1px;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link {
     text-decoration: none;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body {
     border-radius: 22px;
     border: 2px solid #3BB54A;
     background-color: white;
     text-align: center;
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
     color: white !important;
     background-image: linear-gradient(to left, #7EC341, #3BB54A);
   }
-  .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item.btnLog {
+  .navbar .container .row #collapsibleNavbar .navbar-nav .nav-item.btnLog {
     width: 99.5%;
     height: 2.75rem;
     margin: 2px;
