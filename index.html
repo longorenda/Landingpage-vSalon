@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -31,68 +34,73 @@
         </div>
       </div>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link text-body" href="#">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-body" href="#">Tính năng</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-body" href="#">Bảng giá</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-body" href="#">Ứng dụng Mobile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-body" href="#">Phản hồi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-body">
-                <img src="./feather-icon/flags/VN.png" alt="Vietnam Flag" /> Vi
-                <img src="./feather-icon/chevron-down.png" alt="Dropdown Icon" />
-              </a>
-            </li>
-          </ul>
-          <div class="navbar-nav">
-            <button class="nav-item btnLog">Đăng ký</button>
-            <button class="nav-item btnLog">Đăng nhập</button>
-          </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-body" href="#">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body" href="#service">Tính năng</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body" href="#price">Bảng giá</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body" href="#">Ứng dụng Mobile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body" href="#">Phản hồi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body">
+              <img src="./feather-icon/flags/VN.png" alt="Vietnam Flag" /> Vi
+              <img src="./feather-icon/chevron-down.png" alt="Dropdown Icon" />
+            </a>
+          </li>
+        </ul>
+        <div class="navbar-nav">
+          <button class="nav-item btnLog">Đăng ký</button>
+          <button class="nav-item btnLog">Đăng nhập</button>
+        </div>
       </div>
     </div>
   </nav>
   <!--Header End-->
 
   <!-- Slider Start -->
-  <div class="slider-content container-fluid">
+  <div class="slider-content container-fluid" id="slider">
     <div class="swiper-container-slide">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="./img/slide/sld1.png" class="slide-sizeimg">
-          <h1 class="text-overlay">
-            Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
-          </h1>
-          <button class="slide-btn">
-            <a href="#" class="text-link">Dùng thử miễn phí</a>
-          </button>
+          <div class="text-overlay">
+            <h1>
+              Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
+            </h1>
+            <button class="slide-btn">
+              <a href="#" class="text-link">Dùng thử miễn phí</a>
+            </button>
+          </div>
         </div>
         <div class="swiper-slide">
           <img src="./img/slide/sld2.png" class="slide-sizeimg">
           <div class="text-overlay">
-            Tương tác thường xuyên với <span>Khách hàng</span> thân thiết
+            <h1>
+              Tương tác thường xuyên với <span>Khách hàng</span> thân thiết
+            </h1>
+            <button class="slide-btn">
+              <a href="#" class="text-link">Dùng thử miễn phí</a>
+            </button>
           </div>
-          <button class="slide-btn">
-            <a href="#" class="text-link">Dùng thử miễn phí</a>
-          </button>
         </div>
         <div class="swiper-slide">
           <img src="./img/slide/sld3.png" class="slide-sizeimg">
           <div class="text-overlay">
-            Gắn kết, khích lệ <span class="span-mb">nhân viên<p class="text-mb"> qua ứng dụng di động</p></span>
+            <h1>Gắn kết, khích lệ <span class="span-mb">nhân viên<p class="text-mb"> qua ứng dụng di động</p></span>
+            </h1>
+            <button class="slide-btn">
+              <a href="#" class="text-link">Dùng thử miễn phí</a>
+            </button>
           </div>
-          <button class="slide-btn">
-            <a href="#" class="text-link">Dùng thử miễn phí</a>
-          </button>
         </div>
       </div>
     </div>
@@ -100,187 +108,226 @@
   <!-- Slider End -->
 
   <!--Benefit Start-->
-  <div class="benefit-content container-fluid">
-    <!-- Header -->
-    <div class="benefit-header text-center">
-      <h1 class="header-text ">
-        Lợi ích khi sử dụng <span>vSalon</span>
-      </h1>
-      <p class="header-text">Hãy để chúng tôi đồng hành cùng thành công của bạn</p>
-    </div>
-    <!-- Swiper -->
-    <div class="swiper swiper-container-benefit">
-      <div class="swiper-wrapper">
-        <!-- Slide start -->
-        <div class="swiper-slide">
-          <img src="./feather-icon/benefit/benefit-icon-1.png" />
-          <div class="box-content">
-            <span>Gắn kết khách hàng</span>
-            <p>Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.</p>
-          </div>
-        </div>
-        <!-- Slide end -->
-        <!-- Slide start -->
-        <div class="swiper-slide">
-          <img src="./feather-icon/benefit/benefit-icon-2.png" />
-          <div class="box-content">
-            <span>Điều phối lịch hẹn</span>
-            <p>Không còn lo lắng khi quên lịch hẹn với khách hàng.</p>
-          </div>
-        </div>
-        <!-- Slide end -->
-        <!-- Slide start -->
-        <div class="swiper-slide">
-          <img src="./feather-icon/benefit/benefit-icon-3.png" />
-          <div class="box-content">
-            <span>Quản lý hiệu quả</span>
-            <p>Giúp nhân viên tăng năng xuất làm việc. Quản lý hiệu quả từ xa</p>
-          </div>
-        </div>
-        <!-- Slide end -->
+  <div class="benefit-content container-fluid" id="benefit">
+    <div class="container">
+      <!-- Header -->
+      <div class="benefit-header text-center">
+        <h1 class="header-text ">
+          Lợi ích khi sử dụng <span>vSalon</span>
+        </h1>
+        <p class="header-text">Hãy để chúng tôi đồng hành cùng thành công của bạn</p>
       </div>
-      <div class="swiper-button-control">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+      <!-- Swiper -->
+      <div class="swiper swiper-container-benefit">
+        <div class="swiper-wrapper">
+          <!-- Slide start -->
+          <div class="swiper-slide">
+            <img src="./feather-icon/benefit/benefit-icon-1.png" />
+            <div class="box-content">
+              <span>Gắn kết khách hàng</span>
+              <p>Đem đến sự chuyên nghiệp và trải nghiệm dịch vụ tốt nhất cho khách.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./feather-icon/benefit/benefit-icon-2.png" />
+            <div class="box-content">
+              <span>Điều phối lịch hẹn</span>
+              <p>Không còn lo lắng khi quên lịch hẹn với khách hàng.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./feather-icon/benefit/benefit-icon-3.png" />
+            <div class="box-content">
+              <span>Quản lý hiệu quả</span>
+              <p>Giúp nhân viên tăng năng xuất làm việc. Quản lý hiệu quả từ xa</p>
+            </div>
+          </div>
+
+          <!-- Slide end -->
+        </div>
+        <div class="swiper-button-control">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </div>
+
   </div>
   <!--Benefit End-->
 
   <!--Service Start-->
-  <div class="service-content container-fluid">
-    <div class="service-list">
-      <ul class="tab-service">
-        <li class="tab col active" data-category="tab1"
-          onclick="changeImage(this,'./feather-icon/service-tab/active/service-tab1-active.png')">
-          <img src="./feather-icon/service-tab/non-active/service-tab1.png" alt="quanlychuoisalon" class="img-service">
-          <p>Quản lý chuỗi salon</p>
-        </li>
-        <li class="tab col" data-category="tab2"
-          onclick="changeImage(this,'./feather-icon/service-tab/active/service-2-active.png')">
-          <img src="./feather-icon/service-tab/non-active/service-tab2.png" alt="quanlylichhen" class="img-service">
-          <p>Quản lý lịch hẹn</p>
-        </li>
-        <li class="tab col" data-category="tab3"
-          onclick="changeImage(this,'./feather-icon/service-tab/active/service-3-active.png')">
-          <img src="./feather-icon/service-tab/non-active/service-tab3.png" alt="quanlythanhvien" class="img-service">
-          <p>Quản lý thành viên</p>
-        </li>
-        <li class="tab col" data-category="tab4"
-          onclick="changeImage(this,'./feather-icon/service-tab/active/service-4-active.png')">
-          <img src="./feather-icon/service-tab/non-active/service-tab4.png" alt="banhang" class="img-service">
-          <p>Bán hàng</p>
-        </li>
-        <li class="tab col" data-category="tab5"
-          onclick="changeImage(this,'./feather-icon/service-tab/active/service-5-active.png')">
-          <img src="./feather-icon/service-tab/non-active/service-tab5.png" alt="quanlykho" class="img-service">
-          <p>Quản lý kho</p>
-        </li>
-        <li class="tab col" data-category="tab6"
-          onclick="changeImage(this,'./feather-icon/service-tab/active/service-6-active.png')">
-          <img src="./feather-icon/service-tab/non-active/service-tab6.png" alt="quanlynhanvien" class="img-service">
-          <p>Quản lý nhân viên</p>
-        </li>
-        <li class="tab col" data-category="tab7"
-          onclick="changeImage(this,'./feather-icon/service-tab/active/service-7-active.png')">
-          <img src="./feather-icon/service-tab/non-active/service-tab7.png" alt="baocaothongke" class="img-service">
-          <p>Báo cáo thống kê</p>
-        </li>
-      </ul>
-    </div>
-    <div class="service-slide active" id="tab1">
-      <img src="./img/service-image/service-content-img-1.png" alt="img analyze" class="col-6">
-      <div class="content col-lg-6">
-        <h4 class="tittle">Tổng hợp dữ liệu nhanh chóng, chính xác</h4>
-        <p class="description">
-          Báo cáo thông tin lịch hẹn, doanh thu… chi tiết đến từng salon trong chuỗi. Báo cáo tổng hợp cho số liệu tổng
-          quan tình hình kinh doanh của toàn bộ salon. Dễ dàng so sánh, đánh giá hiệu quản hoạt động của từng của hàng.
-        </p>
+  <div class="service-content container-fluid" id="service">
+    <div class="container">
+      <div class="service-header text-center">
+        <h1>Hệ sinh thái <span>vSalon</span></h1>
       </div>
-    </div>
-    <div class="service-slide" id="tab2">
-      <img src="./img/service-image/service-content-img-2.png" alt="img analyze" class="col-6">
-      <div class="content col-lg-6">
-        <h4 class="tittle">Quản lý lịch hẹn</h4>
-        <p class="description">
-          Quản lý lịch hẹn giúp cho salon sắp xếp công việc hiệu quả. Tăng năng suất làm việc của nhân viên, tăng trải
-          nghiệm khách hàng.
-        </p>
-      </div>
-    </div>
-    <div class="service-slide" id="tab3">
-      <img src="./img/service-image/service-content-img-3.png" alt="img analyze" class="col-6">
-      <div class="content col-lg-6">
-        <h4 class="tittle">Duy trì giữ chân khách hàng</h4>
-        <p class="description">
-          Với thẻ thành viên, salon sẽ nhận diện được khách hàng thân thiết, từ đó phục vụ khách hàng tốt hơn để giữ
-          chân khách hàng.
-        </p>
-      </div>
-    </div>
-    <div class="service-slide" id="tab4">
-      <img src="./img/service-image/service-content-img-4.png" alt="img analyze" class="col-6">
-      <div class="content col-lg-6">
-        <h4 class="tittle">Tạo khuyến mại nhanh chóng</h4>
-        <p class="description">
-          Chỉ mất vài phút, bạn đã có thể TẠO VÀ ÁP DỤNG KHUYẾN MẠI cho từng mặt hàng hay nhóm hàng, giá trị khuyến mại
-          linh hoạt theo đơn vị tính (chiếc, bộ; gói…); số tiền cụ thể (vnđ) hoặc % (giá trị đơn hàng, giá trị hàng
-          tặng, điểm tích lũy…). Tất cả các thông tin về hàng khuyến mại và giá trị khuyến mại đều được thể hiện rõ ràng
-          trên hóa đơn (trừ điểm tích lũy), giúp người bán hàng và cả khách hàng có thể dễ ràng tra soát. Không chỉ vậy,
-          khi phát sinh giao dịch Trả hàng thì giá trị khuyến mại đã được áp dụng cho khách cũng sẽ được thể hiện trên
-          hóa đơn Trả hàng, giúp bạn hay nhân viên không bị nhầm lẫn khi hoàn tiền cho khách.
-        </p>
-      </div>
-    </div>
-    <div class="service-slide" id="tab5">
-      <img src="./img/service-image/service-content-img-5.png" alt="img analyze" class="col-6">
-      <div class="content col-lg-6">
-        <h4 class="tittle">Nắm bắt hàng tồn kho, bổ sung hàng hóa kịp thời</h4>
-        <p class="description">
-          vSalon giúp bạn quản lý tồn kho chính xác tới từng mặt hàng cụ thể và chi tiết trong từng chi nhánh, gạt đi
-          nỗi lo muôn thuở về những sản phẩm chồng chất mà không soát nổi con số như tình trạng các cửa hàng hay gặp
-          phải. Theo đó, bạn sẽ chủ động nắm được mặt hàng nào đang bán chạy, số lượng hàng còn tồn trong kho để đưa ra
-          quyết định nhập hàng lần kế tiếp.
-        </p>
-      </div>
-    </div>
-    <div class="service-slide" id="tab6">
-      <img src="./img/service-image/service-content-img-6.png" alt="img analyze" class="col-6">
-      <div class="content col-lg-6">
-        <h4 class="tittle">Lập lịch làm việc khoa học</h4>
-        <ul class="description">
-          <li>Quản lý ca làm việc</li>
-          <li>Ngày nghỉ, ngày lễ</li>
-          <li>Thời gian mở cửa</li>
-          <li>Thời gian đóng cửa</li>
+      <div class="service-list">
+        <ul class="tab-service row">
+          <li class="tab col active" data-category="tab1"
+            onclick="changeImage(this,'./feather-icon/service-tab/active/service-tab1-active.png')">
+            <div class="tab-content">
+              <img src="./feather-icon/service-tab/non-active/service-tab1.png" alt="quanlychuoisalon"
+                class="img-service">
+              <p>Quản lý chuỗi salon</p>
+              <img src="./feather-icon/chevron-down.png" alt="" class="icon-dropdown">
+            </div>
+          </li>
+          <li class="tab col" data-category="tab2"
+            onclick="changeImage(this,'./feather-icon/service-tab/active/service-2-active.png')">
+            <div class="tab-content">
+              <img src="./feather-icon/service-tab/non-active/service-tab2.png" alt="quanlylichhen" class="img-service">
+              <p>Quản lý lịch hẹn</p>
+              <img src="./feather-icon/chevron-down.png" alt="icon-dropdown" class="icon-dropdown">
+            </div>
+          </li>
+          <li class="tab col" data-category="tab3"
+            onclick="changeImage(this,'./feather-icon/service-tab/active/service-3-active.png')">
+            <div class="tab-content">
+              <img src="./feather-icon/service-tab/non-active/service-tab3.png" alt="quanlythanhvien"
+                class="img-service">
+              <p>Quản lý thành viên</p>
+              <img src="./feather-icon/chevron-down.png" alt="icon-dropdown" class="icon-dropdown">
+            </div>
+          </li>
+          <li class="tab col" data-category="tab4"
+            onclick="changeImage(this,'./feather-icon/service-tab/active/service-4-active.png')">
+            <div class="tab-content">
+              <img src="./feather-icon/service-tab/non-active/service-tab4.png" alt="banhang" class="img-service">
+              <p>Bán hàng</p>
+              <img src="./feather-icon/chevron-down.png" alt="icon-dropdown" class="icon-dropdown">
+            </div>
+          </li>
+          <li class="tab col" data-category="tab5"
+            onclick="changeImage(this,'./feather-icon/service-tab/active/service-5-active.png')">
+            <div class="tab-content">
+              <img src="./feather-icon/service-tab/non-active/service-tab5.png" alt="quanlykho" class="img-service">
+              <p>Quản lý kho</p>
+              <img src="./feather-icon/chevron-down.png" alt="icon-dropdown" class="icon-dropdown">
+            </div>
+          </li>
+          <li class="tab col" data-category="tab6"
+            onclick="changeImage(this,'./feather-icon/service-tab/active/service-active.png')">
+            <div class="tab-content">
+              <img src="./feather-icon/service-tab/non-active/service-tab6.png" alt="quanlynhanvien"
+                class="img-service">
+              <p>Quản lý nhân viên</p>
+              <img src="./feather-icon/chevron-down.png" alt="icon-dropdown" class="icon-dropdown">
+            </div>
+          </li>
+          <li class="tab col" data-category="tab7"
+            onclick="changeImage(this,'./feather-icon/service-tab/active/service-7-active.png')">
+            <div class="tab-content">
+              <img src="./feather-icon/service-tab/non-active/service-tab7.png" alt="baocaothongke" class="img-service">
+              <p>Báo cáo thống kê</p>
+              <img src="./feather-icon/chevron-down.png" alt="icon-dropdown" class="icon-dropdown">
+            </div>
+          </li>
         </ul>
       </div>
-    </div>
-    <div class="service-slide" id="tab7">
-      <img src="./img/service-image/service-content-img-7.png" alt="img analyze" class="col-6">
-      <div class="content col-lg-6">
-        <h4 class="tittle">Chúng tôi cung cấp những con số bạn cần</h4>
-        <p class="description">
-          Bạn muốn nắm được doanh thu bán hàng cụ thể đến từng ngày, lịch sử giao dịch mua hàng, doanh số bán hàng của
-          từng nhân viên hay công nợ của từng chi nhánh? Chúng tôi thấu hiểu những mối bận tâm của một người quản lý như
-          bạn. Vì vậy, e-spa cung cấp cho bạn HỆ THỐNG BÁO CÁO chính xác, sinh động và dễ hiểu. Những biểu đồ trực quan
-          giúp bạn có cái nhìn toàn diện về cửa hàng, so sánh hoạt động giữa các chi nhánh để đưa ra những đánh giá đúng
-          đắn trong hoạt động kinh doanh.
-        </p>
+      <div class="service-slide active" id="tab1">
+        <img src="./img/service-image/service-content-img-1.png" alt="img analyze" class="col">
+        <div class="content col-lg">
+          <h4 class="tittle">Tổng hợp dữ liệu nhanh chóng, chính xác</h4>
+          <p class="description">
+            Báo cáo thông tin lịch hẹn, doanh thu… chi tiết đến từng salon trong chuỗi. Báo cáo tổng hợp cho số liệu
+            tổng
+            quan tình hình kinh doanh của toàn bộ salon. Dễ dàng so sánh, đánh giá hiệu quản hoạt động của từng của
+            hàng.
+          </p>
+        </div>
+      </div>
+      <div class="service-slide" id="tab2">
+        <img src="./img/service-image/service-content-img-2.png" alt="img analyze" class="col-lg">
+        <div class="content col-lg">
+          <h4 class="tittle">Quản lý lịch hẹn</h4>
+          <p class="description">
+            Quản lý lịch hẹn giúp cho salon sắp xếp công việc hiệu quả. Tăng năng suất làm việc của nhân viên, tăng trải
+            nghiệm khách hàng.
+          </p>
+        </div>
+      </div>
+      <div class="service-slide" id="tab3">
+        <img src="./img/service-image/service-content-img-3.png" alt="img analyze" class="col-lg">
+        <div class="content col-lg">
+          <h4 class="tittle">Duy trì giữ chân khách hàng</h4>
+          <p class="description">
+            Với thẻ thành viên, salon sẽ nhận diện được khách hàng thân thiết, từ đó phục vụ khách hàng tốt hơn để giữ
+            chân khách hàng.
+          </p>
+        </div>
+      </div>
+      <div class="service-slide" id="tab4">
+        <img src="./img/service-image/service-content-img-4.png" alt="img analyze" class="col-lg">
+        <div class="content col-lg">
+          <h4 class="tittle">Tạo khuyến mại nhanh chóng</h4>
+          <p class="description">
+            Chỉ mất vài phút, bạn đã có thể TẠO VÀ ÁP DỤNG KHUYẾN MẠI cho từng mặt hàng hay nhóm hàng, giá trị khuyến
+            mại
+            linh hoạt theo đơn vị tính (chiếc, bộ; gói…); số tiền cụ thể (vnđ) hoặc % (giá trị đơn hàng, giá trị hàng
+            tặng, điểm tích lũy…). Tất cả các thông tin về hàng khuyến mại và giá trị khuyến mại đều được thể hiện rõ
+            ràng
+            trên hóa đơn (trừ điểm tích lũy), giúp người bán hàng và cả khách hàng có thể dễ ràng tra soát. Không chỉ
+            vậy,
+            khi phát sinh giao dịch Trả hàng thì giá trị khuyến mại đã được áp dụng cho khách cũng sẽ được thể hiện trên
+            hóa đơn Trả hàng, giúp bạn hay nhân viên không bị nhầm lẫn khi hoàn tiền cho khách.
+          </p>
+        </div>
+      </div>
+      <div class="service-slide" id="tab5">
+        <img src="./img/service-image/service-content-img-5.png" alt="img analyze" class="col-lg">
+        <div class="content col-lg">
+          <h4 class="tittle">Nắm bắt hàng tồn kho, bổ sung hàng hóa kịp thời</h4>
+          <p class="description">
+            vSalon giúp bạn quản lý tồn kho chính xác tới từng mặt hàng cụ thể và chi tiết trong từng chi nhánh, gạt đi
+            nỗi lo muôn thuở về những sản phẩm chồng chất mà không soát nổi con số như tình trạng các cửa hàng hay gặp
+            phải. Theo đó, bạn sẽ chủ động nắm được mặt hàng nào đang bán chạy, số lượng hàng còn tồn trong kho để đưa
+            ra
+            quyết định nhập hàng lần kế tiếp.
+          </p>
+        </div>
+      </div>
+      <div class="service-slide" id="tab6">
+        <img src="./img/service-image/service-content-img-6.png" alt="img analyze" class="col-lg">
+        <div class="content col-lg">
+          <h4 class="tittle">Lập lịch làm việc khoa học</h4>
+          <ul class="description">
+            <li>Quản lý ca làm việc</li>
+            <li>Ngày nghỉ, ngày lễ</li>
+            <li>Thời gian mở cửa</li>
+            <li>Thời gian đóng cửa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-slide" id="tab7">
+        <img src="./img/service-image/service-content-img-7.png" alt="img analyze" class="col-lg">
+        <div class="content col-lg">
+          <h4 class="tittle">Chúng tôi cung cấp những con số bạn cần</h4>
+          <p class="description">
+            Bạn muốn nắm được doanh thu bán hàng cụ thể đến từng ngày, lịch sử giao dịch mua hàng, doanh số bán hàng của
+            từng nhân viên hay công nợ của từng chi nhánh? Chúng tôi thấu hiểu những mối bận tâm của một người quản lý
+            như
+            bạn. Vì vậy, e-spa cung cấp cho bạn HỆ THỐNG BÁO CÁO chính xác, sinh động và dễ hiểu. Những biểu đồ trực
+            quan
+            giúp bạn có cái nhìn toàn diện về cửa hàng, so sánh hoạt động giữa các chi nhánh để đưa ra những đánh giá
+            đúng
+            đắn trong hoạt động kinh doanh.
+          </p>
+        </div>
       </div>
     </div>
+
   </div>
   <!--Service End-->
 
   <!--Price Start-->
-  <div class="price-content container-fluid">
+  <div class="price-content container-fluid" id="price">
     <div class="price-container">
       <div class="price-header text-center">
         <h1 class="header-text">Bảng giá phần mềm quản lý <span>Spa, salon vSalon</span></h1>
         <p class="header-text">Hãy lựa chọn gói giải pháp phù hợp với nhu cầu của bạn và dùng thử miễn phí 30 ngày</p>
       </div>
-      <div class="price-content">
+      <div class="price-main">
         <!--Card 1 Start-->
         <div class="price-card col-lg">
           <div class="content-wapper">
@@ -315,11 +362,16 @@
           </button>
         </div>
         <!--Card 1 End-->
-        <div class="price-note col">
-
+        <div class="price-note col-lg">
+          <div class="content-wapper">
+            <img src="./feather-icon/price/desktop.png" alt="">
+            <div class="content-text">
+              <i>Lưu ý : <i class="text-danger">Gói cơ bản</i> chỉ áp dụng cho 1 cửa hàng, để mua thêm cửa hàng mời quý khách nâng cấp lên gói <i class="text-danger">nâng cao</i>.</i>
+            </div>  
+          </div>
         </div>
         <!--Card 2 Start-->
-        <div class="price-card col">
+        <div class="price-card col-lg">
           <div class="content-wapper">
             <div class="content-header">
               <h4 class="text-warning">GÓI CƠ BẢN</h4>

@@ -4,49 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+
+    .tab-service {
+      list-style: none;
+      padding: 0;
+      display: flex;
     }
 
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .tab {
+      cursor: pointer;
+      margin-right: 10px;
       padding: 10px;
-      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
 
-    .icon-nav {
+    .tab.active {
+      background-color: #ddd;
+    }
+
+    .service-slide {
+      display: none;
+    }
+
+    .service-slide.active {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .icon-menu {
-      margin-left: 10px;
-      /* Các thuộc tính CSS khác cho icon-menu */
+      flex-wrap: wrap;
     }
   </style>
+  <title>Service Tabs</title>
 </head>
 <body>
-
-<div class="row">
-  <div class="navbar-brand col-lg col-sm-6">
-    <a href="#" class="logo"><img src="./img/Logo_vSalon.jpg" alt="logo" /></a>
+  <div class="service-list">
+    <ul class="tab-service row">
+      <li class="tab col active" data-category="tab1" onclick="changeTab(this, 'tab1')">
+        <div class="tab-content">
+          <p>Quản lý chuỗi salon</p>
+        </div>
+      </li>
+      <!-- Các tab khác giữ nguyên -->
+    </ul>
   </div>
-  <div class="icon-nav col-sm-6">
-    <button class="navbar-toggler icon-search" type="button" style="border: none;">
-      <img src="./feather-icon/search.png" alt="Search"></img>
-    </button>
-    <button class="navbar-toggler icon-menu" type="button" data-bs-toggle="collapse"
-      data-bs-target="#collapsibleNavbar" style="border: none;">
-      <img src="./feather-icon/mobile/feather-icon/menu.png" class="navbar-toggler-icon" alt="Menu"></img>
-    </button>
+
+  <div class="service-slide active" id="tab1">
+    <!-- Nội dung cho tab1 giữ nguyên -->
   </div>
-</div>
+  <!-- Các service-slide khác giữ nguyên -->
 
-<!-- Các phần tử và nội dung khác của trang web -->
+  <script>
+    function changeTab(tab, tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      const slides = document.querySelectorAll('.service-slide');
 
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      slides.forEach(s => s.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
