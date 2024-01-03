@@ -59,7 +59,6 @@ span {
   color: #3BB54A;
 }
 .navbar .container #collapsibleNavbar .navbar-nav .nav-item .nav-link.text-body:hover {
-  font-weight: 700;
   color: #3BB54A !important;
 }
 .navbar .container #collapsibleNavbar .navbar-nav .nav-item.btnLog {
@@ -91,36 +90,36 @@ span {
 .slider-content.container-fluid {
   padding: 0px;
 }
-.slider-content .swiper-container-slide {
+.slider-content.container-fluid .swiper-container-slide {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.slider-content .swiper-container-slide .swiper-wrapper {
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper {
   width: 100%;
 }
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide {
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide {
   width: 100%;
   flex: 0 0 auto;
   display: inline-block;
   background-color: white;
 }
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg {
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
-  width: 555px;
-  height: 212px;
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container {
   position: absolute;
-  top: 45%;
-  left: 36%;
-  transform: translate(-50%, -50%);
-}
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay h1 {
+  top: 20%;
+  left: 18%;
   width: 100%;
-  height: 114px;
+}
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay {
+  width: 42.5%;
+  text-align: left;
+}
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay h1 {
   font-size: 38px;
   font-weight: 700;
   text-align: left;
@@ -129,7 +128,7 @@ span {
   /* 150% */
   margin-bottom: 50px;
 }
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay .slide-btn {
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay .slide-btn {
   font-size: 20px;
   width: 242px;
   height: 48px;
@@ -138,7 +137,7 @@ span {
   border: 2px solid #3BB54A;
   background-color: #3BB54A;
 }
-.slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay .slide-btn a.text-link {
+.slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay .slide-btn a.text-link {
   text-decoration: none;
   color: #FFF;
   font-size: 20px;
@@ -212,8 +211,8 @@ span {
   line-height: 24px;
   padding: 5% 15%;
 }
-.benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-prev,
-.benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-next {
+.benefit-content .container .swiper.swiper-container-benefit .swiper-button-prev,
+.benefit-content .container .swiper.swiper-container-benefit .swiper-button-next {
   width: 44px;
   height: 44px;
   color: #3BB54A;
@@ -222,25 +221,19 @@ span {
   border: 2px solid #3BB54A;
   border-radius: 100%;
 }
-.benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-prev::after,
-.benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-next::after {
+.benefit-content .container .swiper.swiper-container-benefit .swiper-button-prev::after,
+.benefit-content .container .swiper.swiper-container-benefit .swiper-button-next::after {
   --swiper-navigation-size: none;
   text-align: center;
   width: 100%;
 }
-.benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-prev {
-  margin-left: 10%;
-}
-.benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-next {
-  margin-right: 10%;
+.benefit-content .container .swiper.swiper-container-benefit .swiper-pagination {
+  display: none;
 }
 
 .service-content {
   margin-top: 3%;
   margin-bottom: 3%;
-}
-.service-content .container {
-  max-width: 1031px;
 }
 .service-content .container .service-header {
   padding-top: 20px;
@@ -341,16 +334,13 @@ span {
   display: flex;
   justify-content: center;
 }
-.price-content .price-container {
-  width: 60%;
-}
-.price-content .price-container .price-header h1.header-text {
+.price-content .container .price-header h1.header-text {
   margin-top: 3%;
   font-size: 28px;
   font-weight: 700;
   line-height: 34px;
 }
-.price-content .price-container .price-header p.header-text {
+.price-content .container .price-header p.header-text {
   font-family: "Inter";
   font-size: 18px;
   font-weight: 500;
@@ -359,12 +349,12 @@ span {
   text-align: center;
   margin-top: 2%;
 }
-.price-content .price-container .price-main {
+.price-content .container .price-main {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin: 5% 0;
 }
-.price-content .price-container .price-main .price-card {
+.price-content .container .price-main .price-card {
   background-color: white;
   text-align: center;
   letter-spacing: 0em;
@@ -372,23 +362,25 @@ span {
   border-radius: 8px;
   height: 525px;
 }
-.price-content .price-container .price-main .price-card .content-wapper {
+.price-content .container .price-main .price-card .content-wapper {
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
-.price-content .price-container .price-main .price-card .content-wapper .content-header {
+.price-content .container .price-main .price-card .content-wapper .content-header {
   padding-top: 10%;
   background-color: bisque;
   border-bottom-left-radius: 100% 50%;
   border-bottom-right-radius: 100% 50%;
 }
-.price-content .price-container .price-main .price-card .content-wapper .content-header h4 {
+.price-content .container .price-main .price-card .content-wapper .content-header h4 {
   font-size: 28px;
   font-weight: 700;
   line-height: 34px;
   color: #4F4F4F;
 }
-.price-content .price-container .price-main .price-card .content-wapper .content-header p {
+.price-content .container .price-main .price-card .content-wapper .content-header p {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 10%;
@@ -397,23 +389,20 @@ span {
   line-height: 18px;
   color: #AEAEAE;
 }
-.price-content .price-container .price-main .price-card .content-wapper .content-budget {
+.price-content .container .price-main .price-card .content-wapper .content-budget {
   color: #333333;
   font-size: 36px;
   font-weight: 600;
   line-height: 44px;
-  margin-top: 10%;
-  margin-bottom: 10%;
 }
-.price-content .price-container .price-main .price-card .content-wapper ul.content-benefit {
+.price-content .container .price-main .price-card .content-wapper ul.content-benefit {
   list-style-type: none;
   margin: auto;
-  border-bottom: 1px dashed #BDBDBD;
-  width: 80%;
-  height: 100%;
-  padding: 0 0 10% 0;
+  max-width: 100%;
+  padding: 0 0 5% 0;
 }
-.price-content .price-container .price-main .price-card .content-wapper ul.content-benefit li {
+.price-content .container .price-main .price-card .content-wapper ul.content-benefit li {
+  padding-left: 15%;
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
@@ -421,35 +410,419 @@ span {
   text-align: left;
   margin-top: 5%;
 }
-.price-content .price-container .price-main .price-card .content-wapper ul.content-benefit li img {
+.price-content .container .price-main .price-card .content-wapper ul.content-benefit li img {
   margin-right: 5%;
 }
-.price-content .price-container .price-main .price-card button.card-button {
-  margin: 10% 0;
+.price-content .container .price-main .price-card .content-wapper button.card-button {
   width: 215px;
   height: 48px;
   border-radius: 36px;
   border: 2px solid #3BB54A;
   background-color: #3BB54A;
+  position: absolute;
+  bottom: 29px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.price-content .price-container .price-main .price-card button.card-button a.text-link {
+.price-content .container .price-main .price-card .content-wapper button.card-button a.text-link {
   font-size: 20px;
   font-weight: 600;
   line-height: 30px;
   text-decoration: none;
   color: white;
 }
-.price-content .price-container .price-main .price-note {
+.price-content .container .price-main .price-note {
   order: 1;
+  text-align: center;
+  letter-spacing: 0em;
+  order: 1;
+  border-radius: 8px;
+  height: 525px;
 }
-.price-content .price-container .price-main .price-note .content-wapper img {
-  background-color: #F5F6F9;
+.price-content .container .price-main .price-note .content-wapper {
+  height: 100%;
+}
+.price-content .container .price-main .price-note .content-wapper img {
+  width: 100%;
+  max-width: 363px;
+  max-height: 363px;
+}
+.price-content .container .price-main .price-note .content-wapper .content-text {
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+}
+
+.trial-content {
+  position: relative;
+  height: 242px;
+}
+.trial-content.container-fluid {
+  padding: 0;
+}
+.trial-content.container-fluid img {
   width: 100%;
   height: 100%;
 }
-.price-content .price-container .price-main .price-note .content-wapper .content-text {
-  margin-bottom: 53px;
+.trial-content.container-fluid .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  width: 50%;
+}
+.trial-content.container-fluid .container .text-overlay h1 {
+  margin-top: 3%;
+  color: #FFF;
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px;
+  /* 150% */
+}
+.trial-content.container-fluid .container .text-overlay .trial-btn {
+  color: #FFF;
+  margin: 3% 0;
+  width: 215px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 36px;
+  border: 2px solid #FFF;
+  background: #3BB54A;
+}
+
+.app-content {
+  position: relative;
+  height: 475px;
+}
+.app-content.container-fluid {
+  padding: 0;
+}
+.app-content.container-fluid .container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.app-content.container-fluid .container .row {
+  width: 100%;
+  margin: 0;
+}
+.app-content.container-fluid .container .row .text-overlay .content {
+  margin-top: 80px;
+  width: 100%;
+  text-align: left;
+}
+.app-content.container-fluid .container .row .text-overlay .content .header {
+  width: 100%;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 38px;
+}
+.app-content.container-fluid .container .row .text-overlay .content .description {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.app-content.container-fluid .container .row .text-overlay .download-btn {
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  gap: 16px;
+}
+.app-content.container-fluid .container .row .text-overlay .download-btn img {
+  width: 180px;
+  height: 52px;
+}
+.app-content.container-fluid .container .row .image {
+  position: relative;
+}
+.app-content.container-fluid .container .row .image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.feedback-content {
+  position: relative;
+  height: 865px;
+}
+.feedback-content.container-fluid {
+  padding: 0;
+}
+.feedback-content.container-fluid img {
+  width: 100%;
+  height: 100%;
+}
+.feedback-content.container-fluid .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.feedback-content.container-fluid .container img {
+  width: 100%;
+  height: 100%;
+}
+.feedback-content.container-fluid .container .feedback-header {
+  margin-top: 64px;
+}
+.feedback-content.container-fluid .container .feedback-header h1 {
+  margin-top: 0;
+}
+.feedback-content.container-fluid .container .feedback-header p {
+  margin-top: 15px;
+  margin-bottom: 63px;
+}
+.feedback-content.container-fluid .container .swiper {
+  width: 100%;
+  height: 72%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper {
+  width: 100%;
+  height: 549px;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide img {
+  margin-top: 38px;
+  width: 160px;
+  height: 160px;
+  display: block;
+  border-radius: 50%;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide .box-content {
+  margin-top: 9px;
+  width: 80%;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide .box-content span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide .box-content p.a {
+  padding-top: 4px;
+  padding-bottom: 12px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #AFAEAE;
+  border-bottom: 1px dashed #3BB54A;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide .box-content img.quote {
+  border-radius: unset;
+  height: 25px;
+  width: 29px;
+  margin-top: 25px;
+}
+.feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide .box-content p.b {
+  padding-top: 11px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.feedback-content.container-fluid .container .swiper .swiper-button-control {
+  margin-top: 8px;
+}
+
+.archivement-content {
+  position: relative;
+  text-align: center;
+  height: 396px;
+}
+.archivement-content.container-fluid {
+  padding: 0;
+}
+.archivement-content.container-fluid img {
+  width: 100%;
+  height: 100%;
+}
+.archivement-content.container-fluid .container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  text-align: center;
+  width: 100%;
+}
+.archivement-content.container-fluid .container .text-overlay h1 {
+  color: #3BB54A;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  /* 150% */
+  text-transform: uppercase;
+}
+
+.subcribe-content {
+  max-height: 282px;
+  padding-top: 64px;
+}
+.subcribe-content .container .header-content {
   display: inline;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.subcribe-content .container .subcription {
+  margin-top: 17px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 150% */
+}
+.subcribe-content .container .regist-btn {
+  position: relative;
+  margin-bottom: 65px;
+}
+.subcribe-content .container .regist-btn input[type=text] {
+  width: 60%;
+  height: 54px;
+  max-width: 705px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 32px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("./feather-icon/eva_email-fill.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+.subcribe-content .container .regist-btn .btn {
+  position: absolute;
+  transform: translate(-100%);
+  color: #FFF;
+  height: 46px;
+  border-radius: 36px;
+  background-image: linear-gradient(to left, #7EC341, #3BB54A);
+  margin: 4px 4px 4px -4px;
+  padding: 12px 16px;
+  align-items: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  /* 137.5% */
+}
+
+.footer-content {
+  background-color: #2F4858;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+.footer-content .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  width: 100%;
+}
+.footer-content .container .logo-header {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 30px;
+}
+.footer-content .container .main {
+  position: absolute;
+  margin-top: 145px;
+  display: flex;
+}
+.footer-content .container .main .content .icon {
+  margin-top: 62px;
+}
+.footer-content .container .main .content .icon img {
+  margin-right: 24px;
+}
+.footer-content .container .main .content .header {
+  margin-bottom: 39px;
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+}
+.footer-content .container .main .content .text-description {
+  max-width: 90%;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  /* 143.75% */
+}
+.footer-content .container .main .content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer-content .container .main .content ul .link {
+  padding-bottom: 16px;
+}
+.footer-content .container .main .content ul .contact {
+  padding-bottom: 12px;
+}
+.footer-content .container .main .content span {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  /* 150% */
+}
+.footer-content .image-logo {
+  float: right;
+}
+
+.copy-right {
+  height: 40px;
+}
+.copy-right p {
+  padding-top: 8px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 576px) {
@@ -504,27 +877,37 @@ span {
   .slider-content {
     height: 566px;
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
-    width: 317px;
-    height: 206px;
-    top: 25%;
-    left: 45%;
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg.sld1 {
+    content: url("/vSalon/img/slide/banner_mb.png");
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay h1 {
-    height: 126px;
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg.sld2 {
+    content: url("/vSalon/img/slide/banner_mb_2.png");
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg.sld3 {
+    content: url("/vSalon/img/slide/banner_mb_3.png");
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container {
+    left: 0;
+    top: 7.5%;
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay {
+    width: 80%;
+    min-width: 317px;
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay h1 {
     font-size: 28px;
     line-height: 42px;
-    /* 150% */
+    letter-spacing: 0em;
     margin-bottom: 32px;
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay .span-mb {
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay .span-mb {
     color: #2F4858;
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay .text-mb {
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay .text-mb {
     display: inline;
     color: #3BB54A;
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay button.slide-btn {
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay button.slide-btn {
     width: 15.125rem;
     height: 3rem;
     font-size: 20px;
@@ -534,6 +917,10 @@ span {
   .benefit-content {
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
+  }
+  .benefit-content .container {
+    max-width: 345px;
+    padding: 0;
   }
   .benefit-content .container .benefit-header {
     margin-top: 10%;
@@ -559,9 +946,12 @@ span {
     width: 100%;
     height: 424px;
   }
-  .benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-prev,
-  .benefit-content .container .swiper.swiper-container-benefit .swiper-button-control .swiper-button-next {
+  .benefit-content .container .swiper.swiper-container-benefit .swiper-button-prev,
+  .benefit-content .container .swiper.swiper-container-benefit .swiper-button-next {
     display: none;
+  }
+  .benefit-content .container .swiper.swiper-container-benefit .swiper-pagination {
+    display: block;
   }
   .service-content .container {
     padding-left: 3px;
@@ -649,56 +1039,232 @@ span {
   .service-content .container .service-slide.active {
     display: block !important;
   }
-  .price-content .price-container {
-    width: 100%;
-  }
-  .price-content .price-container .price-header h1.header-text {
+  .price-content .container .price-header h1.header-text {
     font-size: 28px;
     font-weight: 700;
     line-height: 42px;
   }
-  .price-content .price-container .price-header p.header-text {
+  .price-content .container .price-header p.header-text {
     display: none;
   }
-  .price-content .price-container .price-main {
+  .price-content .container .price-main {
     display: grid;
   }
-  .price-content .price-container .price-main .price-card {
+  .price-content .container .price-main .price-card {
     margin-top: 10%;
     order: 1;
   }
-  .price-content .price-container .price-main .price-card .content-wapper .content-header p {
+  .price-content .container .price-main .price-card .content-wapper .content-header {
+    padding-top: 5%;
+  }
+  .price-content .container .price-main .price-card .content-wapper .content-header p {
+    margin-top: 5%;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
   }
-  .price-content .price-container .price-main .price-card .content-wapper .content-budget {
+  .price-content .container .price-main .price-card .content-wapper .content-budget {
     font-size: 32px;
     font-weight: 600;
     line-height: 39px;
   }
-  .price-content .price-container .price-main .price-card .content-wapper ul.content-benefit li {
+  .price-content .container .price-main .price-card .content-wapper ul.content-benefit li {
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
   }
-  .price-content .price-container .price-main .price-card .content-wapper ul.content-benefit li img {
+  .price-content .container .price-main .price-card .content-wapper ul.content-benefit li img {
     margin-left: 5%;
   }
-  .price-content .price-container .price-main .price-card button.card-button a.text-link {
+  .price-content .container .price-main .price-card .content-wapper button.card-button a.text-link {
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
   }
-  .price-content .price-container .price-main .price-note {
+  .price-content .container .price-main .price-note {
     order: 2;
-    margin-top: 24px;
+    height: auto;
   }
-  .price-content .price-container .price-main .price-note img {
+  .price-content .container .price-main .price-note img {
+    display: none;
+  }
+  .trial-content.container-fluid .container {
+    width: 100%;
+  }
+  .trial-content.container-fluid .container .text-overlay {
+    margin-top: 39px;
+  }
+  .trial-content.container-fluid .container .text-overlay h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .trial-content.container-fluid .container .text-overlay .trial-btn {
+    margin-top: 25px;
+    width: 189px;
+    height: 48px;
+  }
+  .app-content {
+    height: 451px;
+    position: relative;
+  }
+  .app-content.container-fluid img {
+    content: url("/vSalon/img/app/bgr_mb.png");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 261px;
+    max-width: 85%;
+  }
+  .app-content.container-fluid .container .row {
+    display: grid;
+  }
+  .app-content.container-fluid .container .row .text-overlay {
+    text-align: center;
+    width: 100%;
+  }
+  .app-content.container-fluid .container .row .text-overlay .content {
+    width: 100%;
+    margin-top: 44px;
+    text-align: center;
+  }
+  .app-content.container-fluid .container .row .text-overlay .content .header {
+    margin-bottom: 20px;
+    width: 100%;
+    color: var(--2-f-4858, #2F4858);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    /* 150% */
+  }
+  .app-content.container-fluid .container .row .text-overlay .content .description {
+    line-height: 24px;
+    font-size: 18px;
+    /* 150% */
+  }
+  .app-content.container-fluid .container .row .text-overlay .download-btn {
+    display: grid;
+    gap: 12px;
+  }
+  .app-content.container-fluid .container .row .text-overlay .download-btn img {
+    width: 124px;
+    height: 36px;
+  }
+  .app-content.container-fluid .container .row .image img {
+    height: auto;
+  }
+  .feedback-content.container-fluid .container .feedback-header {
+    margin-top: 44px;
+  }
+  .feedback-content.container-fluid .container .feedback-header h1 {
+    margin-top: 0;
+  }
+  .feedback-content.container-fluid .container .feedback-header p {
+    color: #4A6069;
+    margin-top: 15px;
+    margin-bottom: 43px;
+  }
+  .feedback-content.container-fluid .container .swiper {
+    height: 70%;
+  }
+  .feedback-content.container-fluid .container .swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+  }
+  .archivement-content img {
+    content: url("/vSalon/img/archivement/banner_mb.png") !important;
+    width: 100%;
+    height: 100%;
+  }
+  .archivement-content .text-overlay {
+    display: none;
+    width: 90%;
+    height: auto;
+  }
+  .archivement-content .text-overlay h1 {
+    margin: 0;
+    color: var(--Color-02, #3BB54A);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* 166.667% */
+    text-transform: uppercase;
+  }
+  .subcribe-content {
+    max-height: 331px;
+    margin-top: 46px;
+    padding: 0;
+  }
+  .subcribe-content .container {
+    padding: 0;
+  }
+  .subcribe-content .container .header-content {
+    display: inline;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+  }
+  .subcribe-content .container .subcription {
+    margin-top: 17px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+  }
+  .subcribe-content .container .regist-btn {
+    margin-bottom: 46px;
+  }
+  .subcribe-content .container .regist-btn input[type=text] {
+    width: 100%;
+    height: 54px;
+    max-width: 343px;
+  }
+  .subcribe-content .container .regist-btn .btn {
+    width: 131px;
+    font-size: 14px;
+  }
+  .footer-content {
+    height: 976px;
+  }
+  .footer-content .container {
+    max-width: 90%;
+  }
+  .footer-content .container .main {
+    display: grid;
+  }
+  .footer-content .container .main .content.order1 {
+    order: 1;
+  }
+  .footer-content .container .main .content.order1 .icon {
+    margin-top: 30px;
+    margin-bottom: 36px;
+  }
+  .footer-content .container .main .content.order2 {
+    order: 2;
+  }
+  .footer-content .container .main .content.icon {
+    display: inline;
+    margin-bottom: 36px;
+    margin-top: 14px;
+  }
+  .footer-content .container .main .content.icon img {
+    margin-right: 24px;
+  }
+  .footer-content .image-logo {
     display: none;
   }
 }
-@media (max-width: 991px) and (min-width: 577px) {
+@media (max-width: 1199px) and (min-width: 577px) {
   .navbar .container {
     padding: 0;
     max-width: 100%;
@@ -749,24 +1315,39 @@ span {
     margin: 2px;
   }
   .slider-content {
-    width: 25%;
-    height: 553px;
+    height: 566px;
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide .text-overlay {
-    width: 34.6875rem;
-    height: 7.125rem;
-    top: 30%;
-    left: 40%;
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg.sld1 {
+    content: url("/vSalon/img/slide/banner_tb.png");
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg.sld2 {
+    content: url("/vSalon/img/slide/banner_tb_2.png");
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .slide-sizeimg.sld3 {
+    content: url("/vSalon/img/slide/banner_tb_3.png");
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container {
+    left: 0;
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay {
+    width: 80%;
+    min-width: 317px;
+    padding-left: 20px;
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay h1 {
     font-size: 38px;
-    line-height: 57px;
     font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 50px;
   }
-  .slider-content .swiper-container-slide .swiper-wrapper .swiper-slide button.slide-btn {
-    top: 50%;
-    left: 3%;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 30px;
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay .span-mb {
+    color: #2F4858;
+  }
+  .slider-content.container-fluid .swiper-container-slide .swiper-wrapper .swiper-slide .container .text-overlay .text-mb {
+    display: inline;
+    color: #3BB54A;
   }
   .benefit-content {
     border-bottom-left-radius: unset;
@@ -775,15 +1356,15 @@ span {
   .benefit-content.container-fluid {
     padding: 77px 0px;
   }
-  .benefit-content .container {
+  .benefit-content.container-fluid .container {
     max-width: 100%;
   }
-  .benefit-content .container .benefit-header p.header-text {
+  .benefit-content.container-fluid .container .benefit-header p.header-text {
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
   }
-  .benefit-content .container .swiper.swiper-container-benefit .swiper-button-control {
+  .benefit-content.container-fluid .container .swiper.swiper-container-benefit .swiper-button-prev, .benefit-content.container-fluid .container .swiper.swiper-container-benefit .swiper-button-next {
     display: none;
   }
   .service-content .container .service-list {
@@ -819,7 +1400,7 @@ span {
     display: block !important;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar .container-fluid #collapsibleNavbar .navbar-nav .nav-item .nav-link {
     padding: 0 15px;
   }

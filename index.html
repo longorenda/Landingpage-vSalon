@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./vSalon/feather-icon/logo.png" type="image/png">
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +13,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <title>Bootstrap 5 Grid Example</title>
+  <title>vSalon</title>
 </head>
 
 <body>
   <!--Header Start-->
-  <nav class="navbar navbar-expand-lg bg-white navbar-white">
+  <nav class="navbar navbar-expand-xl bg-white navbar-white">
     <div class="container">
       <div class="row">
-        <div class="navbar-brand col-lg col-sm">
+        <div class="navbar-brand col-lg-3 col-sm-4">
           <a href="#" class="logo"><img src="./img/Logo_vSalon.jpg" alt="logo" /></a>
         </div>
         <div class="icon-nav col-sm">
@@ -45,10 +46,10 @@
             <a class="nav-link text-body" href="#price">Bảng giá</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-body" href="#">Ứng dụng Mobile</a>
+            <a class="nav-link text-body" href="#mobile">Ứng dụng Mobile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-body" href="#">Phản hồi</a>
+            <a class="nav-link text-body" href="#feedback">Phản hồi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-body">
@@ -71,18 +72,22 @@
     <div class="swiper-container-slide">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./img/slide/sld1.png" class="slide-sizeimg">
-          <div class="text-overlay">
-            <h1>
-              Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
-            </h1>
-            <button class="slide-btn">
-              <a href="#" class="text-link">Dùng thử miễn phí</a>
-            </button>
+          <img src="./img/slide/sld1.png" class="slide-sizeimg sld1">
+          <div class="container">
+            <div class="text-overlay">
+              <h1>
+                Giải pháp điện toán đám mây <span>quản lý Salon</span> hiệu quả nhất
+              </h1>
+              <button class="slide-btn">
+                <a href="#" class="text-link">Dùng thử miễn phí</a>
+              </button>
+            </div>
           </div>
+
         </div>
         <div class="swiper-slide">
-          <img src="./img/slide/sld2.png" class="slide-sizeimg">
+          <img src="./img/slide/sld2.png" class="slide-sizeimg sld2">
+          <div class="container">
           <div class="text-overlay">
             <h1>
               Tương tác thường xuyên với <span>Khách hàng</span> thân thiết
@@ -92,8 +97,10 @@
             </button>
           </div>
         </div>
+        </div>
         <div class="swiper-slide">
-          <img src="./img/slide/sld3.png" class="slide-sizeimg">
+          <img src="./img/slide/sld3.png" class="slide-sizeimg sld3">
+          <div class="container">
           <div class="text-overlay">
             <h1>Gắn kết, khích lệ <span class="span-mb">nhân viên<p class="text-mb"> qua ứng dụng di động</p></span>
             </h1>
@@ -101,6 +108,7 @@
               <a href="#" class="text-link">Dùng thử miễn phí</a>
             </button>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -142,14 +150,11 @@
               <p>Giúp nhân viên tăng năng xuất làm việc. Quản lý hiệu quả từ xa</p>
             </div>
           </div>
-
-          <!-- Slide end -->
         </div>
-        <div class="swiper-button-control">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
+        <!-- Slide end -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
@@ -316,13 +321,12 @@
         </div>
       </div>
     </div>
-
   </div>
   <!--Service End-->
 
   <!--Price Start-->
   <div class="price-content container-fluid" id="price">
-    <div class="price-container">
+    <div class="container">
       <div class="price-header text-center">
         <h1 class="header-text">Bảng giá phần mềm quản lý <span>Spa, salon vSalon</span></h1>
         <p class="header-text">Hãy lựa chọn gói giải pháp phù hợp với nhu cầu của bạn và dùng thử miễn phí 30 ngày</p>
@@ -356,18 +360,20 @@
                 Không phí khởi tạo
               </li>
             </ul>
+            <button class="card-button">
+              <a href="#" class="text-link">Dùng thử ngay</a>
+            </button>
           </div>
-          <button class="card-button">
-            <a href="#" class="text-link">Dùng thử ngay</a>
-          </button>
+
         </div>
         <!--Card 1 End-->
         <div class="price-note col-lg">
           <div class="content-wapper">
             <img src="./feather-icon/price/desktop.png" alt="">
             <div class="content-text">
-              <i>Lưu ý : <i class="text-danger">Gói cơ bản</i> chỉ áp dụng cho 1 cửa hàng, để mua thêm cửa hàng mời quý khách nâng cấp lên gói <i class="text-danger">nâng cao</i>.</i>
-            </div>  
+              <i>Lưu ý : <i class="text-danger">Gói cơ bản</i> chỉ áp dụng cho 1 cửa hàng, để mua thêm cửa hàng mời quý
+                khách nâng cấp lên gói <i class="text-danger">nâng cao</i>.</i>
+            </div>
           </div>
         </div>
         <!--Card 2 Start-->
@@ -402,18 +408,197 @@
                 Không phí khởi tạo
               </li>
             </ul>
+            <button class="card-button">
+              <a href="#" class="text-link">Dùng thử ngay</a>
+            </button>
           </div>
-          <button class="card-button">
-            <a href="#" class="text-link">Dùng thử ngay</a>
-          </button>
+
         </div>
         <!--Card 2 End-->
       </div>
     </div>
   </div>
   <!--Price End-->
-  <script src="script.js"></script>
 
+  <div class="trial-content container-fluid">
+    <img src="./img/trial/banner.png" alt="banner">
+    <div class="container">
+      <div class="text-overlay">
+        <h1 class="text-center">
+          Hãy dùng thử miễn phí phần mềm trước, vSalon sẽ tư vấn cho bạn gói dịch vụ phù hợp sau nhé!
+        </h1>
+        <button class="trial-btn">Dùng thử ngay</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="app-content container-fluid" id="mobile">
+    <div class="container">
+      <div class="row">
+        <div class="text-overlay col">
+          <div class="content">
+            <h1 class="header">Ứng dụng quản lý salon miễn phí
+              <span>trên điện thoại</span>
+            </h1>
+            <p class="description">Quản lý thuận tiện, cập nhật kịp thời với ứng dụng dành cho mobile và tablet
+            </p>
+          </div>
+          <div class="download-btn">
+            <img src="./feather-icon/app/appstore.png" alt="">
+            <img src="./feather-icon/app/googleplay.png" alt="">
+          </div>
+        </div>
+        <div class="image col">
+          <img src="./img/app/phone.png" alt="banner">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="feedback-content container-fluid" id="feedback">
+    <img src="./img/feedback/banner.png" alt="">
+    <div class="container">
+      <!-- Header -->
+      <div class="feedback-header text-center">
+        <h1 class="header-text ">
+          Lắng nghe cảm nhận của khách hàng về <span>vSalon</span>
+        </h1>
+        <p class="header-text">Sự hài lòng của khách hàng chính là thành công lớn nhất của chúng tôi</p>
+      </div>
+      <!-- Swiper -->
+      <div class="swiper swiper-container-feedback">
+        <div class="swiper-wrapper">
+          <!-- Slide start -->
+          <div class="swiper-slide">
+            <img src="./img/feedback/client-1.png" />
+            <div class="box-content">
+              <span>CHỊ HUẾ</span>
+              <p class="a">Marketing Ritta Hair Salon</p>
+              <img src="./feather-icon/feedback/quote.png" alt="quote" class="quote">
+              <p class="b">Phần mềm e-spa hỗ trợ rất tốt trong các chiến dịch Marketing của chúng tôi đến với khách
+                hàng, nhất là các dịp lễ trong năm, không còn phải tốn nhiều chi phí maketing đắt đỏ, nhưng thông điệp
+                của chúng tôi vẫn truyền tải được đến với đối tượng khách hàng.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/feedback/client-2.png" />
+            <div class="box-content">
+              <span>Bà Helen Trần</span>
+              <p class="a">Giám đốc Eden Beauty</p>
+              <img src="./feather-icon/feedback/quote.png" alt="quote" class="quote">
+              <p class="b">Phần mềm e-spa hỗ trợ rất tốt trong các chiến dịch Marketing của chúng tôi đến với khách
+                hàng, nhất là các dịp lễ trong năm, không còn phải tốn nhiều chi phí maketing đắt đỏ, nhưng thông điệp
+                của chúng tôi vẫn truyền tải được đến với đối tượng khách hàng.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/feedback/client-3.png" />
+            <div class="box-content">
+              <span>Anh Ngọc Anh</span>
+              <p class="a">Giám đốc chuỗi Spa Lagertroemia</p>
+              <img src="./feather-icon/feedback/quote.png" alt="quote" class="quote">
+              <p class="b">Phần mềm e-spa hỗ trợ rất tốt trong các chiến dịch Marketing của chúng tôi đến với khách
+                hàng, nhất là các dịp lễ trong năm, không còn phải tốn nhiều chi phí maketing đắt đỏ, nhưng thông điệp
+                của chúng tôi vẫn truyền tải được đến với đối tượng khách hàng.</p>
+            </div>
+          </div>
+          <!-- Slide end -->
+        </div>
+
+        <div class="swiper-button-control">
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archivement-content container-fluid">
+    <img src="./img/archivement/banner_lg.png" alt="">
+    <div class="container">
+      <div class="text-overlay">
+        <h1>Khách hàng đã sử dụng vSalon</h1>
+        <h1>Sự hài lòng của khách hàng chính là thành công lớn nhất của chúng tôi</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="subcribe-content container-fluid">
+    <div class="container text-center">
+      <h1 class="header-content">
+        Hơn <span class="text-warning">5,000</span> doanh nghiệp, chủ shop đang quản lý cửa hàng như thế nào?
+      </h1>
+      <p class="subcription">
+        Đăng ký dùng thử miễn phí 30 ngày để khám phá
+      </p>
+      <div class="regist-btn">
+        <input type="text" name="search" placeholder="Nhập mail hoặc số điện thoại của bạn">
+        <button class="btn"> Đăng kí ngay !</button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer-content">
+    <div class="container">
+      <div class="logo-header">
+        <img src="./feather-icon/footer/logo-icon.png" alt="logo-icon">
+      </div>
+      <div class="main">
+          <div class="content order1">
+            <h3 class="header">Giới thiệu</h3>
+            <p class="text-description">e-Spa là hệ thống phần mềm quản lý spa, salon… hoàn toàn đáp ứng nhu cầu quản
+              trị và chăm sóc khách hàng của các spa, salon tóc, thẩm mỹ viện...</p>
+            <div class="icon">
+              <img src="./feather-icon/footer/fb.png" alt="">
+              <img src="./feather-icon/footer/ytb.png" alt="">
+            </div>
+          </div>
+          <div class="content order2">
+            <h3 class="header">Liên kết</h3>
+            <ul class="row">
+              <li class="link text-description">Điều khoản bảo mật</li>
+              <li class="link text-description">Chính sách bảo hành</li>
+              <li class="link text-description">Hình thức thanh toán</li>
+              </p>
+          </div>
+          <div class="content order1">
+            <h3 class="header">Liên hệ</h3>
+            <ul class="row">
+              <li class="contact text-description">
+                <span>Công Ty TNHH Orenda</span>
+              </li>
+              <li class="contact text-description">
+                <span>GPKD:</span> 0108149044 - cấp ngày 29/01/2018
+              </li>
+              <li class="contact text-description">
+                <img src="./feather-icon/footer/location.png" alt="icon-location">
+                Tầng 4, Số 84 Tô Vĩnh Diện, Phường Khương Trung, Quận Thanh Xuân, TP Hà Nội
+              </li>
+              <li class="contact text-description">
+                <img src="./feather-icon/footer/phone.png" alt="icon-phone">
+                0865.500.968
+              </li>
+              <li class="contact text-description">
+                <img src="./feather-icon/footer/mail.png" alt="icon-mail">
+                Support@vSalon.vn
+              </li>
+            </ul>
+          </div>
+
+
+      </div>
+    </div>
+    <img src="./feather-icon/footer/logo-img.png" alt="logo-img" class="image-logo">
+  </footer>
+
+  <div class="copy-right">
+    <p class="text-center">Copyright © 2021 <span>vSalon</span> . All rights reserved.</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

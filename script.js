@@ -12,7 +12,7 @@ var swiper2 = new Swiper('.swiper-container-benefit', {
     slidesPerView: "auto",
     coverflowEffect: {
         rotate: 0,
-        stretch: 40,
+        stretch: 20,
         depth: 300,
         modifier: 1,
         slideShadows: false,
@@ -25,6 +25,25 @@ var swiper2 = new Swiper('.swiper-container-benefit', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+var swiper3 = new Swiper('.swiper-container-feedback', {
+    loop: true,
+    spaceBetween: 30,
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        modifier: 1,
+        slideShadows: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 
 //Events click list icon service
 var last_image_Clicked;
