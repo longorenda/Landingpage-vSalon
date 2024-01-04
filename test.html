@@ -3,65 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-category Tabs</title>
   <style>
-
-    .tab-service {
-      list-style: none;
-      padding: 0;
-      display: flex;
-    }
-
     .tab {
       cursor: pointer;
-      margin-right: 10px;
       padding: 10px;
+      margin: 5px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      display: inline-block;
     }
 
-    .tab.active {
-      background-color: #ddd;
-    }
-
-    .service-slide {
+    .service-slide, .service-slide-mb {
       display: none;
     }
 
-    .service-slide.active {
-      display: flex;
-      flex-wrap: wrap;
+    .service-slide.active, .service-slide-mb.active {
+      display: block;
     }
   </style>
-  <title>Service Tabs</title>
 </head>
 <body>
-  <div class="service-list">
-    <ul class="tab-service row">
-      <li class="tab col active" data-category="tab1" onclick="changeTab(this, 'tab1')">
-        <div class="tab-content">
-          <p>Quản lý chuỗi salon</p>
-        </div>
-      </li>
-      <!-- Các tab khác giữ nguyên -->
-    </ul>
-  </div>
 
-  <div class="service-slide active" id="tab1">
-    <!-- Nội dung cho tab1 giữ nguyên -->
-  </div>
-  <!-- Các service-slide khác giữ nguyên -->
+<div class="tab" data-category="category1 category2">Tab 1</div>
+<div class="tab" data-category="category3 category4">Tab 2</div>
+<div class="tab" data-category="category5 category6">Tab 3</div>
 
-  <script>
-    function changeTab(tab, tabId) {
-      const tabs = document.querySelectorAll('.tab');
-      const slides = document.querySelectorAll('.service-slide');
+<div id="category1" class="service-slide">Content for Category 1</div>
+<div id="category2" class="service-slide-mb">Content for Category 2</div>
+<div id="category3" class="service-slide">Content for Category 3</div>
+<div id="category4" class="service-slide-mb">Content for Category 4</div>
+<div id="category5" class="service-slide">Content for Category 5</div>
+<div id="category6" class="service-slide-mb">Content for Category 6</div>
 
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.service-slide, .service-slide-mb');
 
-      slides.forEach(s => s.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function () {
+        // Get an array of selected categories
+        const selectedCategories = this.dataset.category.split(' ');
+
+        // Hide all contents
+        contents.forEach(content => {
+          content.classList.remove('active');
+        });
+
+        // Show the selected contents
+        selectedCategories.forEach(category => {
+          document.getElementById(category).classList.add('active');
+        });
+
+        // Handle tab activation (you can replace this with your logic)
+        console.log(`Tab ${this.textContent} is active for categories: ${selectedCategories[0]}`);
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

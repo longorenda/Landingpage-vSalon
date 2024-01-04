@@ -25,7 +25,6 @@ var swiper2 = new Swiper('.swiper-container-benefit', {
         prevEl: '.swiper-button-prev',
     },
 });
-
 var swiper3 = new Swiper('.swiper-container-feedback', {
     loop: true,
     spaceBetween: 30,
@@ -41,34 +40,58 @@ var swiper3 = new Swiper('.swiper-container-feedback', {
         slideShadows: false,
     },
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  });
+});
 
 //Events click list icon service
 var last_image_Clicked;
 document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.service-slide');
+    const contents = document.querySelectorAll('.service-slide, .service-slide-mobile');
 
     tabs.forEach(tab => {
         tab.addEventListener('click', function () {
-            const selectedCategory = this.dataset.category;
+            // Get an array of selected categories
+            const selectedCategories = this.dataset.category.split(' ');
 
             // Hide all contents
             contents.forEach(content => {
                 content.classList.remove('active');
             });
 
-            // Show the selected content
-            document.getElementById(selectedCategory).classList.add('active');
+            // Show the selected contents
+            selectedCategories.forEach(category => {
+                const selectedContent = document.getElementById(category);
+                if (selectedContent) {
+                    selectedContent.classList.add('active');
+                }
+            });
+
+            // Add 'active' class to the clicked tab
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            this.classList.add('active');
+
 
             // Handle tab activation
-            changeTab(this, `./feather-icon/service-tab/active/service-${selectedCategory}-active.png`);
+            changeTab(this, `./feather-icon/service-tab/active/service-${selectedCategory[0]}-active.png`);
         });
     });
 
-    function changeTab(selectedTab, activeImagePath) {
+   
+    
+});
+window.onload = function () {
+    var defaultTab = document.querySelector('.tab');
+    var defaultImage = defaultTab.querySelector('img');
+    defaultImage.setAttribute('data-original-src', defaultImage.src);
+    defaultImage.src = './feather-icon/service-tab/active/service-tab1-active.png'; // Thay đổi thành ảnh mặc định
+    defaultTab.click();
+};
+
+ function changeTab(selectedTab, activeImagePath) {
         // Remove "active" class from all tabs
         tabs.forEach(tab => {
             tab.classList.remove('active');
@@ -81,19 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
         changeImage(selectedTab, activeImagePath);
     }
 
-    function changeImage(tab, imagePath) {
-        // Change the image source for the selected tab
-        const imageElement = tab.querySelector('.img-service');
-        imageElement.src = imagePath;
-    }
-});
-window.onload = function () {
-    var defaultTab = document.querySelector('.tab');
-    var defaultImage = defaultTab.querySelector('img');
-    defaultImage.setAttribute('data-original-src', defaultImage.src);
-    defaultImage.src = './feather-icon/service-1-active.png'; // Thay đổi thành ảnh mặc định
-    defaultTab.click();
-};
 function changeImage(element, newSrc) {
     // Kiểm tra xem đã click vào thẻ nào chưa
     if (last_image_Clicked) {
